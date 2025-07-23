@@ -1,0 +1,71 @@
+FastTree Version 2.1.11 SSE3, OpenMP (64 threads)
+Alignment: standard input
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories
+Ignored unknown character K (seen 1 times)
+Ignored unknown character M (seen 2 times)
+Ignored unknown character R (seen 9 times)
+Ignored unknown character S (seen 4 times)
+Ignored unknown character W (seen 1 times)
+Ignored unknown character X (seen 97 times)
+Ignored unknown character Y (seen 13 times)
+      0.19 seconds: Joined    100 of    171
+Initial topology in 0.30 seconds
+Refining topology: 30 rounds ME-NNIs, 2 rounds ME-SPRs, 15 rounds ML-NNIs
+      0.29 seconds: ME NNI round 1 of 30, 1 of 172 splits
+      0.40 seconds: SPR round   1 of   2, 1 of 346 nodes
+      0.73 seconds: SPR round   1 of   2, 101 of 346 nodes
+      1.03 seconds: SPR round   1 of   2, 201 of 346 nodes
+      1.33 seconds: SPR round   1 of   2, 301 of 346 nodes
+      1.50 seconds: ME NNI round 11 of 30, 1 of 172 splits
+      1.82 seconds: SPR round   2 of   2, 101 of 346 nodes
+      2.09 seconds: SPR round   2 of   2, 201 of 346 nodes
+      2.42 seconds: SPR round   2 of   2, 301 of 346 nodes
+      2.58 seconds: ME NNI round 21 of 30, 1 of 172 splits
+Total branch-length 7.330 after 2.64 sec
+      2.78 seconds: ML Lengths 101 of 172 splits
+      2.89 seconds: ML NNI round 1 of 15, 1 of 172 splits
+      3.21 seconds: ML NNI round 1 of 15, 101 of 172 splits, 12 changes (max delta 9.064)
+ML-NNI round 1: LogLk = -25635.179 NNIs 25 max delta 12.43 Time 3.48
+      3.48 seconds: Optimizing GTR model, step 1 of 12
+      3.69 seconds: Optimizing GTR model, step 2 of 12
+      3.91 seconds: Optimizing GTR model, step 3 of 12
+      4.09 seconds: Optimizing GTR model, step 4 of 12
+      4.35 seconds: Optimizing GTR model, step 5 of 12
+      4.59 seconds: Optimizing GTR model, step 6 of 12
+      4.78 seconds: Optimizing GTR model, step 7 of 12
+      4.91 seconds: Optimizing GTR model, step 8 of 12
+      5.06 seconds: Optimizing GTR model, step 9 of 12
+      5.20 seconds: Optimizing GTR model, step 10 of 12
+      5.34 seconds: Optimizing GTR model, step 11 of 12
+      5.51 seconds: Optimizing GTR model, step 12 of 12
+GTR Frequencies: 0.2449 0.2072 0.2200 0.3280
+GTR rates(ac ag at cg ct gt) 1.1629 2.6010 1.3956 0.6687 2.9955 1.0000
+      5.64 seconds: ML Lengths 1 of 172 splits
+      5.84 seconds: ML Lengths 101 of 172 splits
+      6.00 seconds: Site likelihoods with rate category 1 of 20
+      6.10 seconds: Site likelihoods with rate category 8 of 20
+      6.21 seconds: Site likelihoods with rate category 16 of 20
+Switched to using 20 rate categories (CAT approximation)
+Rate categories were divided by 0.873 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+Use -gamma for approximate but comparable Gamma(20) log-likelihoods
+      6.75 seconds: ML NNI round 2 of 15, 101 of 172 splits, 9 changes (max delta 1.318)
+ML-NNI round 2: LogLk = -22523.952 NNIs 15 max delta 2.32 Time 7.09
+      7.09 seconds: ML NNI round 3 of 15, 1 of 172 splits
+      7.64 seconds: ML NNI round 3 of 15, 101 of 172 splits, 7 changes (max delta 5.910)
+ML-NNI round 3: LogLk = -22514.359 NNIs 7 max delta 5.91 Time 7.68
+ML-NNI round 4: LogLk = -22512.960 NNIs 2 max delta 0.73 Time 8.02
+      8.02 seconds: ML NNI round 5 of 15, 1 of 172 splits
+ML-NNI round 5: LogLk = -22512.815 NNIs 0 max delta 0.00 Time 8.15
+Turning off heuristics for final round of ML NNIs (converged)
+      8.15 seconds: ML NNI round 6 of 15, 1 of 172 splits
+      8.58 seconds: ML NNI round 6 of 15, 101 of 172 splits, 1 changes (max delta 0.017)
+ML-NNI round 6: LogLk = -22512.422 NNIs 1 max delta 0.02 Time 9.06 (final)
+      9.06 seconds: ML Lengths 1 of 172 splits
+      9.27 seconds: ML Lengths 101 of 172 splits
+Optimize all lengths: LogLk = -22512.400 Time 9.43
+     10.17 seconds: ML split tests for    100 of    171 internal splits
+Total time: 10.84 seconds Unique: 174/204 Bad splits: 0/171

@@ -1,0 +1,886 @@
+localrules directive specifies rules that are not present in the Snakefile:
+	copybb
+	trimcollect
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+all                  1
+blinference        294
+genetreeinfer      293
+refine             294
+stitch               1
+total              883
+
+Select jobs to execute...
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/bestTree.nwk
+    jobid: 57
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=29, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/bestTree.nwk
+    jobid: 833
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=175, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/bestTree.nwk
+    jobid: 659
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=55, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/bestTree.nwk
+    jobid: 227
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=187, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/bestTree.nwk
+    jobid: 827
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=114, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/bestTree.nwk
+    jobid: 200
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=201, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/bestTree.nwk
+    jobid: 494
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=268, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/bestTree.nwk
+    jobid: 842
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=172, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/bestTree.nwk
+    jobid: 60
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=46, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/bestTree.nwk
+    jobid: 626
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=162, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/bestTree.nwk
+    jobid: 278
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=274, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/bestTree.nwk
+    jobid: 320
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=102, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/bestTree.nwk
+    jobid: 96
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=48, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/bestTree.nwk
+    jobid: 138
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=262, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/bestTree.nwk
+    jobid: 194
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=16, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/bestTree.nwk
+    jobid: 752
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=227, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/bestTree.nwk
+    jobid: 836
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=21, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/bestTree.nwk
+    jobid: 446
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=160, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/bestTree.nwk
+    jobid: 599
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=260, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/bestTree.nwk
+    jobid: 377
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=37, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/bestTree.nwk
+    jobid: 419
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=33, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/bestTree.nwk
+    jobid: 614
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=288, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/bestTree.nwk
+    jobid: 683
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=213, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/bestTree.nwk
+    jobid: 111
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=96, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/bestTree.nwk
+    jobid: 572
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=234, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/bestTree.nwk
+    jobid: 641
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=210, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/bestTree.nwk
+    jobid: 251
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=269, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/bestTree.nwk
+    jobid: 656
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=153, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/bestTree.nwk
+    jobid: 308
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=71, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/bestTree.nwk
+    jobid: 476
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=261, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/bestTree.nwk
+    jobid: 587
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=178, gene=backbone
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 24 16:19:18 2025]
+rule genetreeinfer:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/bestTree.nwk
+    jobid: 545
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/benchmark.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/bestTree.nwk
+    wildcards: stage=udance, cluster=276, gene=backbone
+    resources: tmpdir=/tmp
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 57
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/29/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 833
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/175/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 827
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/114/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 227
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/187/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule genetreeinfer:
+    jobid: 200
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/201/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 659
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/55/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 494
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/268/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 842
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/172/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 278
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/274/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 60
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/46/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 626
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/162/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 446
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/160/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 752
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/227/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 194
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/16/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 599
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/260/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 138
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/262/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 96
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/48/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 320
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/102/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 419
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/33/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 111
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/96/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 683
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/213/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 836
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/21/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 614
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/288/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 572
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/234/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 251
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/269/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 308
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/71/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 656
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/153/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 377
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/37/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:22 2025]
+Error in rule genetreeinfer:
+    jobid: 641
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/210/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:23 2025]
+Error in rule genetreeinfer:
+    jobid: 587
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/178/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:23 2025]
+Error in rule genetreeinfer:
+    jobid: 545
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/276/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Mar 24 16:19:23 2025]
+Error in rule genetreeinfer:
+    jobid: 476
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/aln.fa
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/bestTree.nwk
+    shell:
+        
+            # many instances of this rule may run simultaneously. To reduce the IO overhead, we "sponge" the output
+            # before appending to udance_logpath
+            source uDance/mysponge.sh
+            (
+            bash uDance/process_a_marker.sh /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/261/backbone/aln.fa nuc 3 raxml-ng 1
+            ) 2>&1 | mysponge #>> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-03-24T161916.033098.snakemake.log

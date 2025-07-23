@@ -1,0 +1,5 @@
+localrules directive specifies rules that are not present in the Snakefile:
+	copybb
+	trimcollect
+
+Unlocking working directory.

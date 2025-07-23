@@ -1,0 +1,103 @@
+2025-07-23 14:40:36	[LOG] WITCH is running with: -i /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/in/Agaricales_DB.fasta -d /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa -o Agaricales_DB_aligned.fasta -t 32
+2025-07-23 14:40:36	[LOG] Main configuration loaded from /home/genome/.witch_msa/main.config
+2025-07-23 14:40:36	[WARNING] Initializing ProcessorPoolExecutor instance...
+2025-07-23 14:40:36	[LOG] Backbone size set to: 205
+2025-07-23 14:40:36	[LOG] Full length sequences set to be from 439 to 732 character long
+2025-07-23 14:40:36	[LOG] Detected 1 sequences not within median length
+2025-07-23 14:40:36	[LOG] Backbone resized to: 204
+2025-07-23 14:40:36	[LOG] Running magus backbone alignment...
+2025-07-23 14:43:15	[LOG] Finished magus backbone alignment, backbone file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta, query file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/queries.fasta
+2025-07-23 14:43:15	[LOG] Molecule type was not specified. Inferred type: dna
+2025-07-23 14:43:15	[LOG] Running FastTree2 backbone tree estimation...
+2025-07-23 14:43:26	[LOG] Finished FastTree2 backbone tree, tree file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.tre
+2025-07-23 14:43:26	[LOG] Started decomposing the backbone to eHMM
+2025-07-23 14:43:26	[LOG] Reading backbone alignment: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:43:26	[LOG] Reading backbone tree: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.tre
+2025-07-23 14:43:26	[LOG] The ensemble of HMM subsets have the following range (# sequences): [10, None]
+2025-07-23 14:43:26	[LOG] Creating an ensemble of HMMs: 63 subsets
+2025-07-23 14:43:27	[LOG] Successfully creating 63 HMMs at /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/root
+2025-07-23 14:43:27	[LOG] Running all-against-all HMM searches between queries and HMMs...
+2025-07-23 14:43:27	[LOG] Reading in fragment files and breaking them into at most 32 chunks (each having at most 20000 sequences)
+2025-07-23 14:43:27	[LOG] Finished breaking fragments into 1 chunks to /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/fragment_chunks
+2025-07-23 14:43:27	[LOG] Successfully completed 63 HMMSearch jobs.
+2025-07-23 14:43:27	[WARNING] Closing ProcessPoolExecutor instance (for backbone)...
+2025-07-23 14:43:27	[WARNING] ProcessPoolExecutor instance re-opened (for query alignment).
+2025-07-23 14:43:27	[LOG] Creating a local copy of backbone alignment (all letters to upper-cases) at: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:43:27	[LOG] Started splitting queries (N=1) to subsets...
+2025-07-23 14:43:27	[LOG] Finished splitting queries in memory.
+2025-07-23 14:43:27	[LOG] Number of alignment subsets: 63
+2025-07-23 14:43:28	[LOG] Reading and ranking bit-scores from HMMSearch files
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 23/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 33/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 9/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 46/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 14/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 6/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 53/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 27/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 56/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 52/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 28/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 36/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 35/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 59/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 42/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 24/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 50/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 44/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 12/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 5/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 39/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 11/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 43/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 18/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 57/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 45/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 13/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 61/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 34/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 25/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 1/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 7/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 29/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 38/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 41/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 20/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 15/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 21/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 31/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 30/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 60/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 4/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 54/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 19/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 48/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 58/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 2/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 26/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 32/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 0/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 16/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 10/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 37/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 3/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 40/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 22/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 62/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 8/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 47/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 17/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 49/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 51/63
+2025-07-23 14:43:28	[LOG] Reading HMMSearch result 55/63
+2025-07-23 14:43:28	[LOG] Ranking bit-scores
+2025-07-23 14:43:28	[LOG] Finished ranking bit-scores
+2025-07-23 14:43:28	[WARNING] Starting to calculate weights...
+2025-07-23 14:43:28	[WARNING] Finished calculating weights!
+2025-07-23 14:43:30	[LOG] NR_178158	passed to main pipeline with top 10 weights: ((31, np.float64(1.0)), (30, np.float64(3.3380978014341106e-19)), (26, np.float64(4.244538451369068e-26)), (25, np.float64(3.37348573056359e-30)), (24, np.float64(6.2379124876661625e-58)), (0, np.float64(9.621659021253307e-72)), (48, np.float64(3.6683335978955295e-108)), (40, np.float64(6.560129519032419e-109)), (53, np.float64(2.402658256750156e-109)), (49, np.float64(9.757824633351971e-110)))
+2025-07-23 14:43:30	[LOG] (UPP-style merging) Merging all GCM subproblems with transitivity and singletons from queries collapsed...
+2025-07-23 14:43:30	[LOG] Finished merging all GCM subproblems, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/Agaricales_DB_aligned.fasta
+2025-07-23 14:43:30	[LOG] Masked final alignment written to: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/Agaricales_DB_aligned.masked.fasta
+2025-07-23 14:43:30	[WARNING] Closing ProcessPoolExecutor instance...
+2025-07-23 14:43:30	[WARNING] ProcessPoolExecutor instance closed.
+2025-07-23 14:43:30	[LOG] WITCH finished in 173.7294683456421 seconds...

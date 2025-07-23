@@ -1,0 +1,30 @@
+localrules directive specifies rules that are not present in the Snakefile:
+	trimcollect
+	copybb
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+decompose        1
+stitch           1
+total            3
+
+Select jobs to execute...
+
+[Mon Mar 24 13:46:14 2025]
+checkpoint decompose:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement.jplace, /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/trimmed
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk
+    jobid: 2
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/benchmarks/decompose.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk
+    resources: tmpdir=/tmp, cpus=32, mem_mb=160000, mem_mib=152588
+DAG of jobs will be updated after completion.
+
+Terminating processes on user request, this might take some time.
+Cancelling snakemake on user request.

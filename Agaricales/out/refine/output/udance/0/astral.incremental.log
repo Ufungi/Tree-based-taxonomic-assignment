@@ -1,0 +1,548 @@
+
+================== ASTRAL-MP ===================== 
+
+This is ASTRAL-MP version 5.17.2
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+Starting 32 threads ...
+There are 32 threads used to run.
+1 trees read from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/refine/output/udance/0/astral_input.trees
+All output trees will be *arbitrarily* rooted at FJ917622
+1 constraint tree read from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/refine/output/udance/0/astral_constraint.nwk
+All gene trees are converted to be compatible with species tree.
+
+======== Running the main analysis
+Number of taxa: 225 (225 species)
+Taxa: [FJ917622, KF774137, FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521, EU935543, GU266261, FJ904969, FJ904966, FJ917624, KF774136, SFC2018090571, SFC2016090732, SFC2013080733, SFC2014072312, SFC2014082802, HF546218, FJ904972, FJ904976, JN943604, HF546217]
+Taxon occupancy: {MW845282=1, FJ157142=1, EU784298=1, JX896446=1, NR_111682=1, NR_138007=1, AY176432=1, GQ329051=1, FJ917624=1, FJ917622=1, AB699640=1, JX896447=1, KJ701795=1, KJ701794=1, AM882892=1, AM882893=1, AM882896=1, KP885643=1, KP885644=1, HF546218=1, GQ329041=1, FM208878=1, MG734736=1, MG734733=1, DQ389722=1, SFC2017072682=1, MG734729=1, KT284912=1, SFC2015090439=1, FM208882=1, NR_160505=1, MG734742=1, FM208862=1, FM208861=1, KP858000=1, DQ182518=1, MG734744=1, KP192536=1, DQ182509=1, NR_178158=1, KF381521=1, KP311432=1, NR_131807=1, MK116612=1, MK116611=1, DQ389702=1, MK116608=1, AM882906=1, SFC2018091110=1, MK116606=1, MK116605=1, SFC20200916-40=1, MK116603=1, MK116602=1, FM208860=1, MN751483=1, KX684873=1, MN751482=1, MN751485=1, KM657920=1, KM657925=1, FN550931=1, KM657923=1, DQ389719=1, DQ389718=1, DQ389710=1, KY287712=1, SFC2018070535=1, MK116617=1, MK116616=1, MK116613=1, KP885635=1, SFC2016090732=1, NR_148106=1, KX657000=1, KP885639=1, KP300875=1, KC992942=1, KP300876=1, KP300877=1, KC992944=1, SFC2017071309=1, KP300874=1, KT951355=1, KP885634=1, MH366628=1, HF546217=1, AJ236064=1, MH366629=1, MH366625=1, MH366626=1, NR_130262=1, MH366627=1, SFC2014072312=1, LT220177=1, JN943604=1, JF907969=1, EU784300=1, SFC2013080733=1, AF482830=1, SFC2018090583=1, MH997904=1, MH997905=1, JN944081=1, JN944082=1, AF325643=1, NR_152951=1, DQ404388=1, EU363033=1, HQ662166=1, MH428836=1, JX133167=1, SFC2018090571=1, KJ576811=1, AY669595=1, FJ157088=1, FJ904966=1, FJ904969=1, MH428841=1, KY349131=1, KP096234=1, FJ481050=1, KP096233=1, NR_103638=1, JX827166=1, KX656999=1, SFC2014082802=1, KX656997=1, MF361839=1, DQ389687=1, MZ087882=1, AY899265=1, FJ157090=1, FJ904972=1, JF907873=1, NR_103641=1, FJ904976=1, GU266261=1, JF907883=1, JF908055=1, MK116601=1, AY899271=1, MK116600=1, AY899273=1, AY899274=1, DQ389697=1, AY899275=1, AY899276=1, AF389165=1, AF389164=1, DQ389690=1, KF774137=1, KP229416=1, KF774136=1, KP229417=1, KC842418=1, KC992882=1, KM657899=1, KC992883=1, SFC2019061905=1, SFC2020071608=1, SFC2018070490=1, AF482874=1, AF357026=1, JF908060=1, AF357027=1, NR_119528=1, AF357028=1, SFC2018091503=1, MG734714=1, AF357029=1, MG734715=1, DQ067580=1, AF357030=1, AF357031=1, SFC2021090220=1, AF126100=1, JF907775=1, JF907774=1, LRU85316=1, NR_145004=1, MG734720=1, DQ185567=1, SFC2020071619=1, KP192590=1, JF907780=1, EU935543=1, MK116588=1, MG734725=1, NR_119897=1, MG734724=1, MW504987=1, MG367206=1, MG734718=1, MG734719=1, KM657892=1, DQ185561=1, NR_103631=1, MK116593=1, MK116591=1, MK116590=1, AM882883=1, AM882884=1, AM882885=1, MK116599=1, MK116598=1, KP192564=1, MK116597=1, MK116596=1, MK116594=1, AM882886=1, AM882887=1, AM882888=1, KC992893=1, KC992894=1, FJ167656=1, AY943975=1, AY176442=1, KT875187=1, SFC2018090790=1, KU528828=1, AM882996=1, KU528827=1, KU528826=1, SFC2020071604=1}
+Number of gene trees: 1
+0 trees have missing taxa
+Calculating distance matrix (for completion of X) ....
+with 4 distance matrices for parallellism
+Species tree distances calculated ...
+
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition from gene trees: 903
+Adding to X using resolutions of greedy consensus ...
+
+calculating extra bipartitions to be added at level 1 ...
+Computing greedy consensus  
+Adding to X using resolutions of greedy consensus ...
+took 1 seconds
+Limit for sigma of degrees:5675
+
+polytomy size limit : > 3
+discarded polytomies: 
+All polytomy sizes: [3, 3, 3, 3, 3, 3, 3]
+Threshold 0.0:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Threshold 0.01:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Threshold 0.02:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Threshold 0.05:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Threshold 0.1:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Threshold 0.2:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Threshold 0.3333333333333333:
+polytomy of size 3; rounds with additions with at least 5 support: 0; clusters: 905
+Number of Clusters after addition by greedy: 905
+gradient0 in heuristiic: 905
+partitions formed in 1.826 secs
+Dynamic Programming starting after 1.826 secs
+Using tree-based weight calculation.
+Polytree max score: 103933719
+Polytree building time: 0.009 seconds.
+Using native AVX batch computing method.
+Number of quartet trees in the gene trees: 103933719
+Computing hash values took 0 seconds
+Size of largest cluster: 225
+Size of largest cluster: 225
+Finishing up:234 0 0
+Total Number of elements weighted: 233
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.9204847466297247
+Optimization score: 95669403
+Optimal tree inferred in 3.055 secs.
+(FJ917622,(GU266261,(((KF774137,(EU935543,(((((((((KP858000,(((KJ576811,((((KU528827,(KU528826,SFC2020071604)),(AF357029,JF907780)),(AF357031,(AF357027,(JF907775,KP192590)))),((AF357028,KP192536),(AF357026,KP192564)))),((KP885644,(KP885643,(AF357030,JF907774))),(KP885634,KP885635))),(KU528828,KP885639))),(AB699640,LT220177)),((((((MK116612,(MK116611,MK116613)),(MK116603,MK116602)),((MK116594,MH428836),(MH428841,MK116593))),(MK116608,(MK116605,MK116606))),(MK116590,MK116591)),((MK116588,(SFC2018091503,(MK116601,((MK116600,(MK116597,MK116599)),(MK116598,MK116596))))),(MK116617,MK116616)))),((((FN550931,(AM882896,((MF361839,(AM882888,(AM882886,(AM882887,(AM882883,AM882884))))),(DQ067580,(AM882893,AM882892))))),(AM882906,KY349131)),((MH366625,(MH366629,(MH366627,MH366628))),(SFC2020071608,MH366626))),(AM882996,(AM882885,(AF126100,AF325643))))),((((((KC992893,((DQ389722,(MG734724,SFC2020071619)),(MG734744,DQ389718))),(DQ389719,(MG734733,KC992894))),(DQ389710,(DQ389702,(DQ389697,(DQ389690,((MG367206,SFC2019061905),(MG734729,DQ389687))))))),(KC992942,KC992944)),(NR_148106,(MG734718,((MG734736,(((MG734725,NR_160505),(MG734714,MG734742)),(SFC2018090583,MG734715))),(KC992883,(KC992882,(MG734719,MG734720))))))),((((MZ087882,(HQ662166,((MN751483,(AY669595,(MN751485,(FJ157088,(KY287712,(SFC20200916-40,(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282)))))))))),((AJ236064,KC842418),(JF907873,JF907883))))),(NR_131807,AF389164)),(KP311432,(NR_103631,((NR_111682,(NR_103641,NR_152951)),(NR_103638,NR_178158))))),(NR_130262,KT875187)))),((((((NR_145004,((DQ182518,(((DQ185561,(AY899271,(KM657923,KM657925))),(DQ185567,KM657892)),(SFC2018070535,KM657899))),(MH997904,MH997905))),((KT284912,NR_138007),(SFC2018091110,MW504987))),((AY943975,((SFC2018070490,(AY899276,(AY899275,(AY899274,(AY899273,NR_119528))))),(KP229416,KP229417))),(AF482830,(AY899265,DQ182509)))),(EU363033,(DQ404388,KM657920))),(KX656999,((SFC2017071309,(SFC2018090790,(SFC2017072682,(KT951355,KX656997)))),(KX657000,KX684873)))),((JN944082,(((JN944081,((KP300875,(JX827166,FJ481050)),(KJ701794,KJ701795))),(AY176432,(KP096234,(SFC2015090439,KP096233)))),(((KP300876,(KP300874,(KP300877,AY176442))),(JX896446,JX896447)),(JX133167,LRU85316)))),(AF482874,(GQ329041,GQ329051))))),(KF381521,(JF908060,((((FM208882,(FM208860,(FM208862,FM208878))),(FM208861,JF908055)),(EU784300,EU784298)),(SFC2021090220,NR_119897))))),(FJ167656,JF907969)),(FJ917624,(FJ904969,FJ904966))))),(HF546218,(SFC2014082802,(SFC2014072312,(SFC2013080733,(SFC2016090732,(KF774136,SFC2018090571))))))),(HF546217,(JN943604,(FJ904972,FJ904976))))));
+Final quartet score is: 95669403
+Final normalized quartet score is: 0.9204847466297247
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KJ576811}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP885634, KP885635, AF357030, JF907774, KP885643, KP885644}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116611, MK116613, MK116612}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116603, MK116602}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JF907775, KP192590, AF357027, AF357031}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357029, JF907780, KU528826, SFC2020071604, KU528827}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KU528828, KP885639}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MH428841, MK116593}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116594, MH428836}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116603, MK116602, MK116611, MK116613, MK116612}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116594, MH428841, MK116593, MH428836}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AB699640, LT220177}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357029, JF907780}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JF907775, KP192590}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116611, MK116613}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP885634, KP885635}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JF907775, KP192590, AF357027}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KU528826, SFC2020071604}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357030, JF907774, KP885643, KP885644}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357030, JF907774, KP885643}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357026, KP192564}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357030, JF907774}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, AB699640, LT220177}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KU528826, SFC2020071604, KU528827}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MH366627, MH366628}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882906, KY349131}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2020071608, MH366626}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, AM882896}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882893, AM882892, DQ067580}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882893, AM882892}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888, MF361839}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116617, MK116616}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116598, MK116596, MK116601, MK116597, MK116599, MK116600}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116598, MK116596, MK116597, MK116599, MK116600}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116598, MK116596}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116597, MK116599, MK116600}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116597, MK116599}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116590, MK116591}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116608, MK116605, MK116606}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116605, MK116606}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734725, NR_160505, MG734714, MG734742}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734714, MG734742}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734725, NR_160505}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KC992942, KC992944}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ389690, MG367206, SFC2019061905, MG734729, DQ389687}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG367206, SFC2019061905, MG734729, DQ389687}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734729, DQ389687}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG367206, SFC2019061905}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734733, KC992894, DQ389719}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734733, KC992894}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734724, SFC2020071619, DQ389722, MG734744, DQ389718}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734744, DQ389718}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734724, SFC2020071619, DQ389722}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734724, SFC2020071619}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, AF126100, AF325643, AM882885, AM882996, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF126100, AF325643, AM882885, AM882996, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF126100, AF325643, AM882885, AM882996}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF126100, AF325643, AM882885}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF126100, AF325643}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MH366625, MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_103641, NR_152951, NR_111682}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_103641, NR_152951}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_131807, AF389164}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JF907873, JF907883, AJ236064, KC842418}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JF907873, JF907883}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AJ236064, KC842418}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MN751483, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF389165, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF389165, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF389165, FJ157090, FJ157142, KY287712, MN751482, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF389165, FJ157090, FJ157142, MN751482, MW845282, SFC20200916-40}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF389165, FJ157090, FJ157142, MN751482, MW845282}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ157090, FJ157142, MN751482, MW845282}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ157090, FJ157142, MW845282}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ157142, MW845282}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734719, MG734720, KC992882, KC992883}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734719, MG734720, KC992882, KC992883}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734719, MG734720, KC992882}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MG734719, MG734720}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018090583, MG734715}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP229416, KP229417}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899273, AY899274, AY899275, AY899276, NR_119528}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899273, AY899274, AY899275, NR_119528}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899273, AY899274, NR_119528}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899273, NR_119528}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987, KT284912, NR_138007}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KT284912, NR_138007}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MH997904, MH997905}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070535, KM657899}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ185567, KM657892}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ185561, AY899271, KM657923, KM657925}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899271, KM657923, KM657925}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KM657923, KM657925}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_130262, KT875187}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_103641, NR_152951, NR_111682, NR_103638, NR_178158}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{NR_103638, NR_178158}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP300877, AY176442, KP300876, KP300874}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP300877, AY176442, KP300874}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP300877, AY176442}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY176432, SFC2015090439, KP096233, KP096234}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2015090439, KP096233, KP096234}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2015090439, KP096233}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX827166, FJ481050, KP300875, KJ701794, KJ701795, JN944081}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX827166, FJ481050, KP300875, KJ701794, KJ701795}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KJ701794, KJ701795}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX827166, FJ481050, KP300875}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX827166, FJ481050}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KX657000, KX684873}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2017072682, KT951355, KX656997, SFC2018090790}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2017072682, KT951355, KX656997}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KT951355, KX656997}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ404388, KM657920, EU363033}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{DQ404388, KM657920}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899265, DQ182509, AF482830}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AY899265, DQ182509}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774136, SFC2018090571}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774137, FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521, EU935543, FJ904969, FJ904966, FJ917624}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521, EU935543, FJ904969, FJ904966, FJ917624}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521, FJ904969, FJ904966, FJ917624}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ904969, FJ904966, FJ917624}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ904969, FJ904966}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ167656, JF907969}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2021090220, NR_119897}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{EU784300, EU784298}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878, FM208882, FM208861, JF908055}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208861, JF908055}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878, FM208882}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208860, FM208862, FM208878}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FM208862, FM208878}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{AF482874, GQ329041, GQ329051}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{GQ329041, GQ329051}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX133167, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{JX133167, LRU85316}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KP300877, AY176442, KP300876, KP300874, JX896446, JX896447}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774137, FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521, EU935543, FJ904969, FJ904966, FJ917624, KF774136, SFC2018090571, SFC2016090732, SFC2013080733, SFC2014072312, SFC2014082802, HF546218, FJ904972, FJ904976, JN943604, HF546217}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ904972, FJ904976, JN943604, HF546217}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ904972, FJ904976, JN943604}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{FJ904972, FJ904976}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774137, FJ167656, JF907969, AF357028, KP192536, AF357026, KP192564, JF907775, KP192590, AF357027, AF357031, AF357029, JF907780, KU528826, SFC2020071604, KU528827, KP885634, KP885635, AF357030, JF907774, KP885643, KP885644, KJ576811, KU528828, KP885639, KP858000, SFC2018091503, MK116598, MK116596, MK116601, MK116597, MK116599, MK116600, MK116588, MK116617, MK116616, MK116594, MH428841, MK116593, MH428836, MK116603, MK116602, MK116611, MK116613, MK116612, MK116608, MK116605, MK116606, MK116590, MK116591, AB699640, LT220177, MZ087882, MN751483, JF907873, JF907883, AJ236064, KC842418, AF389165, AY669595, FJ157088, FJ157090, FJ157142, KY287712, MN751482, MN751485, MW845282, SFC20200916-40, HQ662166, NR_131807, AF389164, KP311432, NR_103641, NR_152951, NR_111682, NR_103638, NR_178158, NR_103631, NR_130262, KT875187, AF126100, AF325643, AM882885, AM882996, SFC2018090583, MG734715, MG734725, NR_160505, MG734714, MG734742, MG734736, MG734718, MG734719, MG734720, KC992882, KC992883, NR_148106, MG734733, KC992894, DQ389719, KC992893, MG734724, SFC2020071619, DQ389722, MG734744, DQ389718, DQ389690, MG367206, SFC2019061905, MG734729, DQ389687, DQ389697, DQ389702, DQ389710, KC992942, KC992944, AM882883, AM882884, AM882887, AM882886, AM882888, MF361839, AM882893, AM882892, DQ067580, FN550931, AM882896, AM882906, KY349131, SFC2020071608, MH366626, MH366625, MH366627, MH366628, MH366629, SFC2018091110, MW504987, KT284912, NR_138007, SFC2018070535, KM657899, DQ185567, KM657892, DQ185561, AY899271, KM657923, KM657925, DQ182518, MH997904, MH997905, NR_145004, SFC2018070490, AY899273, AY899274, AY899275, AY899276, NR_119528, KP229416, KP229417, AY943975, AY899265, DQ182509, AF482830, DQ404388, KM657920, EU363033, SFC2017071309, SFC2017072682, KT951355, KX656997, SFC2018090790, KX657000, KX684873, KX656999, AF482874, GQ329041, GQ329051, JX133167, JX827166, FJ481050, KP300875, KJ701794, KJ701795, AY176432, SFC2015090439, KP096233, KP096234, JN944081, JN944082, LRU85316, KP300877, AY176442, KP300876, KP300874, JX896446, JX896447, FM208860, FM208862, FM208878, FM208882, FM208861, JF908055, EU784300, EU784298, SFC2021090220, NR_119897, JF908060, KF381521, EU935543, FJ904969, FJ904966, FJ917624, KF774136, SFC2018090571, SFC2016090732, SFC2013080733, SFC2014072312, SFC2014082802, HF546218}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774136, SFC2018090571, SFC2016090732, SFC2013080733, SFC2014072312, SFC2014082802, HF546218}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774136, SFC2018090571, SFC2016090732, SFC2013080733, SFC2014072312, SFC2014082802}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774136, SFC2018090571, SFC2016090732, SFC2013080733, SFC2014072312}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774136, SFC2018090571, SFC2016090732, SFC2013080733}
+You may want to ignore posterior probabilities and other statistics related to the following branch branch because the effective number of genes impacting it is only 1:
+	{KF774136, SFC2018090571, SFC2016090732}
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(MK116597,MK116599);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(MH366627,MH366628);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(FJ157142,MW845282);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(FJ157090,(FJ157142,MW845282):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(MN751482,(FJ157090,(FJ157142,MW845282):0.0):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282):0.0):0.0):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(SFC20200916-40,(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282):0.0):0.0):0.0):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(KY287712,(SFC20200916-40,(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282):0.0):0.0):0.0):0.0):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(FJ157088,(KY287712,(SFC20200916-40,(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282):0.0):0.0):0.0):0.0):0.0):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(MN751485,(FJ157088,(KY287712,(SFC20200916-40,(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282):0.0):0.0):0.0):0.0):0.0):0.0):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(KM657923,KM657925);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(AY899273,NR_119528);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(AY899274,(AY899273,NR_119528):0.0);
+Warning: node has effective N ==0 and so no quartet resolutions: 
+(AY899275,(AY899274,(AY899273,NR_119528):0.0):0.0);
+Extended species tree:
+(FJ917622,(GU266261,(((KF774137,(EU935543,(((((((((KP858000,(((KJ576811,((((KU528827,(KU528826,SFC2020071604)0.67:0.2876820724517809)0.67:0.2876820724517809,(AF357029,JF907780)0.67:0.2876820724517809)0.67:0.2876820724517809,(AF357031,(AF357027,(JF907775,KP192590)0.17:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,((AF357028,KP192536)0.67:0.2876820724517809,(AF357026,KP192564)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.17:0.0,((KP885644,(KP885643,(AF357030,JF907774)0.17:0.0)0.67:0.2876820724517809)0.17:0.0,(KP885634,KP885635)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(KU528828,KP885639)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(AB699640,LT220177)0.67:0.2876820724517809)0.17:0.0,((((((MK116612,(MK116611,MK116613)0.17:0.0)0.67:0.2876820724517809,(MK116603,MK116602)0.67:0.2876820724517809)0.67:0.2876820724517809,((MK116594,MH428836)0.17:0.0,(MH428841,MK116593)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(MK116608,(MK116605,MK116606)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(MK116590,MK116591)0.67:0.2876820724517809)0.67:0.2876820724517809,((MK116588,(SFC2018091503,(MK116601,((MK116600,(MK116597,MK116599)0.33:0.0)0.67:0.2876820724517809,(MK116598,MK116596)0.67:0.2876820724517809)0.17:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(MK116617,MK116616)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,((((FN550931,(AM882896,((MF361839,(AM882888,(AM882886,(AM882887,(AM882883,AM882884)0.67:0.2876820724517809)0.67:0.2876820724517809)0.17:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809,(DQ067580,(AM882893,AM882892)0.67:0.2876820724517809)0.67:0.2876820724517809)0.17:0.0)0.17:0.0)0.67:0.2876820724517809,(AM882906,KY349131)0.67:0.2876820724517809)0.67:0.2876820724517809,((MH366625,(MH366629,(MH366627,MH366628)0.33:0.0)0.67:0.2876820724517809)0.17:0.0,(SFC2020071608,MH366626)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(AM882996,(AM882885,(AF126100,AF325643)0.67:0.2876820724517809)0.67:0.2876820724517809)0.51:0.027605266091888857)0.22:0.0)0.2:0.0,((((((KC992893,((DQ389722,(MG734724,SFC2020071619)0.67:0.2876820724517809)0.67:0.2876820724517809,(MG734744,DQ389718)0.67:0.2876820724517809)0.17:0.0)0.17:0.0,(DQ389719,(MG734733,KC992894)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(DQ389710,(DQ389702,(DQ389697,(DQ389690,((MG367206,SFC2019061905)0.67:0.2876820724517809,(MG734729,DQ389687)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(KC992942,KC992944)0.67:0.2876820724517809)0.67:0.2876820724517809,(NR_148106,(MG734718,((MG734736,(((MG734725,NR_160505)0.67:0.2876820724517809,(MG734714,MG734742)0.67:0.2876820724517809)0.67:0.2876820724517809,(SFC2018090583,MG734715)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(KC992883,(KC992882,(MG734719,MG734720)0.67:0.2876820724517809)0.17:0.0)0.67:0.2876820724517809)0.17:0.0)0.32:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809,((((MZ087882,(HQ662166,((MN751483,(AY669595,(MN751485,(FJ157088,(KY287712,(SFC20200916-40,(AF389165,(MN751482,(FJ157090,(FJ157142,MW845282)0.33:0.0)0.33:0.0)0.33:0.0)0.33:0.0)0.33:0.0)0.33:0.0)0.33:0.0)0.33:0.0)0.67:0.2876820724517809)0.17:0.0,((AJ236064,KC842418)0.67:0.2876820724517809,(JF907873,JF907883)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(NR_131807,AF389164)0.67:0.2876820724517809)0.67:0.2876820724517809,(KP311432,(NR_103631,((NR_111682,(NR_103641,NR_152951)0.67:0.2876820724517809)0.67:0.2876820724517809,(NR_103638,NR_178158)0.17:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(NR_130262,KT875187)0.67:0.2876820724517809)0.67:0.2876820724517809)0.64:0.23361485118150507)0.67:0.2876820724517809,((((((NR_145004,((DQ182518,(((DQ185561,(AY899271,(KM657923,KM657925)0.33:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809,(DQ185567,KM657892)0.67:0.2876820724517809)0.67:0.2876820724517809,(SFC2018070535,KM657899)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(MH997904,MH997905)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,((KT284912,NR_138007)0.67:0.2876820724517809,(SFC2018091110,MW504987)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,((AY943975,((SFC2018070490,(AY899276,(AY899275,(AY899274,(AY899273,NR_119528)0.33:0.0)0.33:0.0)0.33:0.0)0.67:0.2876820724517809)0.67:0.2876820724517809,(KP229416,KP229417)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(AF482830,(AY899265,DQ182509)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(EU363033,(DQ404388,KM657920)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(KX656999,((SFC2017071309,(SFC2018090790,(SFC2017072682,(KT951355,KX656997)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(KX657000,KX684873)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,((JN944082,(((JN944081,((KP300875,(JX827166,FJ481050)0.67:0.2876820724517809)0.67:0.2876820724517809,(KJ701794,KJ701795)0.67:0.2876820724517809)0.67:0.2876820724517809)0.17:0.0,(AY176432,(KP096234,(SFC2015090439,KP096233)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(((KP300876,(KP300874,(KP300877,AY176442)0.67:0.2876820724517809)0.17:0.0)0.67:0.2876820724517809,(JX896446,JX896447)0.67:0.2876820724517809)0.67:0.2876820724517809,(JX133167,LRU85316)0.64:0.23823379703779982)0.17:0.0)0.24:0.0)0.67:0.2876820724517809,(AF482874,(GQ329041,GQ329051)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(KF381521,(JF908060,((((FM208882,(FM208860,(FM208862,FM208878)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(FM208861,JF908055)0.67:0.2876820724517809)0.67:0.2876820724517809,(EU784300,EU784298)0.67:0.2876820724517809)0.67:0.2876820724517809,(SFC2021090220,NR_119897)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809,(FJ167656,JF907969)0.67:0.2876820724517809)0.67:0.2876820724517809,(FJ917624,(FJ904969,FJ904966)0.67:0.2876820724517809)0.67:0.2876820724517809)0.21:0.0)0.17:0.0)0.66:0.2727856778265822,(HF546218,(SFC2014082802,(SFC2014072312,(SFC2013080733,(SFC2016090732,(KF774136,SFC2018090571)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.17:0.0,(HF546217,(JN943604,(FJ904972,FJ904976)0.67:0.2876820724517809)0.67:0.2876820724517809)0.67:0.2876820724517809)0.18:0.0));
+Weight calculation took 0.007421051 secs
+ASTRAL finished in 3.441 secs
+Shutting down threading

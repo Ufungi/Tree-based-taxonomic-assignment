@@ -1,0 +1,30 @@
+# Description: Configuration for the pipeline
+# Parameters:
+organism: Agaricales # Change input organism name
+db_prefix: Agaricales_DB # Change prefix for the database files
+threads: 32 # Change number of threads to use
+chunk_size: 500 # Change number of sequences to process in each chunk
+outgroup: NR_103631, NR_178158, NR_152951, NR_111682, NR_103638, NR_103641 # Change outgroup for raxml-ng
+
+# Path to working directory and external tools
+wdr: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline  # Change this path to working directory
+witch: /home/genome/anaconda3/envs/TM-pipeline/bin/witch.py  # Change this path to WITCH (which witch.py)
+udance: /data/genome/run/snyoo/programs/uDance  # Change this path to uDance
+fastroot: /home/genome/anaconda3/envs/TM-pipeline/bin/FastRoot.py  # Change this path to FastRoot (which FastRoot.py)
+scripts: ${wdr}/scripts  # Path to custom scripts
+
+# Path to the input files
+in: ${wdr}/${organism}/in  # in directory
+db_fasta: ${wdr}/${organism}/in/${db_prefix}.fasta  # Database file
+query_fasta: ${wdr}/${organism}/in/query.fasta  # Query file. No special characters (including underscores) are allowed
+
+# Path to the output files
+out: ${wdr}/${organism}/out  # Output directory
+db_msa: ${wdr}/${organism}/out/backbone/msa/${db_prefix}_aligned.fasta  # Aligned database file
+draft_tree: ${wdr}/${organism}/out/backbone/tree/${db_prefix}_aligned.tree  # Draft tree file
+resolved_tree: ${wdr}/${organism}/out/backbone/tree/${db_prefix}_resolved.tree  # Resolved tree file
+best_tree: ${wdr}/${organism}/out/backbone/tree/${db_prefix}_aligned.fasta.raxml.bestTree  # Best tree file
+
+# Path to the log files
+log_file: ${wdr}/${organism}/pipeline.log
+

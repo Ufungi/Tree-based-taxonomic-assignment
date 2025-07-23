@@ -1,0 +1,239 @@
+2025-07-23 14:40:36    MAGUS was run with: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/magus.py --recurse false -np 32 -i /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.unaln.fasta -d /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment -o /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta --mafftpath /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --mclpath /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mcl/bin/mcl --hmmsearchpath /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/hmmer/hmmsearch --hmmbuildpath /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/hmmer/hmmbuild --hmmalignpath /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/hmmer/hmmalign --fasttreepath /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/fasttree/FastTreeMP
+2025-07-23 14:40:36    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:40:36    Aligning sequences /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.unaln.fasta
+2025-07-23 14:40:36    Building PASTA-style FastTree initial tree on /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.unaln.fasta with skeleton size 300..
+2025-07-23 14:40:36    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/initial_align.txt
+2025-07-23 14:40:36    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/skeleton_sequences.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/temp_initial_align.txt
+2025-07-23 14:41:09    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/initial_align.txt
+2025-07-23 14:41:09    Data type wasn't specified. Inferred data type DNA from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/initial_align.txt
+2025-07-23 14:41:09    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/initial_tree.tre
+2025-07-23 14:41:09    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/fasttree/FastTreeMP -nt -gtr -fastest -nosupport /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/initial_align.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/temp_initial_tree.tre
+2025-07-23 14:41:16    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/initial_tree/initial_tree.tre
+2025-07-23 14:41:16    Built initial tree on /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.unaln.fasta in 39.87390208244324 sec..
+2025-07-23 14:41:16    Using target subset size of 50, and maximum number of subsets 25..
+2025-07-23 14:41:16    Decomposing a tree with 204 leaves into 98 and 106..
+2025-07-23 14:41:16    Decomposing a tree with 106 leaves into 52 and 54..
+2025-07-23 14:41:16    Decomposing a tree with 98 leaves into 47 and 51..
+2025-07-23 14:41:16    Decomposing a tree with 54 leaves into 26 and 28..
+2025-07-23 14:41:16    Decomposing a tree with 52 leaves into 26 and 26..
+2025-07-23 14:41:16    Decomposing a tree with 51 leaves into 22 and 29..
+2025-07-23 14:41:16    Decomposed /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.unaln.fasta into 7 subsets in 39.8988151550293 sec..
+2025-07-23 14:41:16    Heads up! All backbone alignments are treated equally..
+2025-07-23 14:41:16    Building 7 subalignments..
+2025-07-23 14:41:16    Subset has 47/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Subset has 26/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Subset has 28/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Subset has 26/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Subset has 26/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Subset has 22/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Subset has 29/200 sequences, aligning with MAFFT..
+2025-07-23 14:41:16    Prepared 7 subset alignment tasks..
+2025-07-23 14:41:16    Merging 7 subaligments..
+2025-07-23 14:41:16    Using 10 MAFFT backbones..
+2025-07-23 14:41:16    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_2.txt
+2025-07-23 14:41:16    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_2.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_2.txt
+2025-07-23 14:41:16    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt
+2025-07-23 14:41:16    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_8_mafft.txt
+2025-07-23 14:41:18    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_2.txt
+2025-07-23 14:41:18    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_1.txt
+2025-07-23 14:41:18    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_1.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_1.txt
+2025-07-23 14:41:18    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt
+2025-07-23 14:41:18    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_7_mafft.txt
+2025-07-23 14:41:23    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_4.txt
+2025-07-23 14:41:23    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_4.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_4.txt
+2025-07-23 14:41:23    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_1.txt
+2025-07-23 14:41:23    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt
+2025-07-23 14:41:23    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_9_mafft.txt
+2025-07-23 14:41:23    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt
+2025-07-23 14:41:23    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_10_mafft.txt
+2025-07-23 14:41:26    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_4.txt
+2025-07-23 14:41:26    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_3.txt
+2025-07-23 14:41:26    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_3.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_3.txt
+2025-07-23 14:41:26    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt
+2025-07-23 14:41:26    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_1_mafft.txt
+2025-07-23 14:41:30    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_3.txt
+2025-07-23 14:41:30    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt
+2025-07-23 14:41:30    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_4_mafft.txt
+2025-07-23 14:41:30    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt
+2025-07-23 14:41:30    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_6_mafft.txt
+2025-07-23 14:41:35    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_5.txt
+2025-07-23 14:41:35    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_5.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_5.txt
+2025-07-23 14:41:40    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_6.txt
+2025-07-23 14:41:40    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_6.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_6.txt
+2025-07-23 14:41:42    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_5.txt
+2025-07-23 14:41:42    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt
+2025-07-23 14:41:42    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_2_mafft.txt
+2025-07-23 14:41:42    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt
+2025-07-23 14:41:42    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_3_mafft.txt
+2025-07-23 14:41:44    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_6.txt
+2025-07-23 14:41:44    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt
+2025-07-23 14:41:44    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_unalign.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_backbone_5_mafft.txt
+2025-07-23 14:41:49    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_7.txt
+2025-07-23 14:41:49    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mafft/mafft --localpair --maxiterate 1000 --ep 0.123 --quiet --thread 32 --anysymbol /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/decomposition/subset_7.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/temp_subalignment_subset_7.txt
+2025-07-23 14:41:54    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_7.txt
+2025-07-23 14:42:50    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt
+2025-07-23 14:42:50    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt to the graph..
+2025-07-23 14:42:50    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt
+2025-07-23 14:42:50    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt to the graph - weight = 1.
+2025-07-23 14:42:51    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt
+2025-07-23 14:42:51    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt to the graph..
+2025-07-23 14:42:52    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt
+2025-07-23 14:42:52    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt to the graph - weight = 1.
+2025-07-23 14:42:56    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt
+2025-07-23 14:42:56    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt to the graph..
+2025-07-23 14:42:56    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt
+2025-07-23 14:42:56    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt to the graph - weight = 1.
+2025-07-23 14:42:57    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt
+2025-07-23 14:42:57    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt to the graph..
+2025-07-23 14:42:57    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt
+2025-07-23 14:42:57    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt to the graph - weight = 1.
+2025-07-23 14:42:58    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt
+2025-07-23 14:42:58    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt to the graph..
+2025-07-23 14:42:58    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt
+2025-07-23 14:42:58    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt to the graph - weight = 1.
+2025-07-23 14:43:02    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt
+2025-07-23 14:43:02    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt to the graph..
+2025-07-23 14:43:02    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt
+2025-07-23 14:43:02    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt to the graph - weight = 1.
+2025-07-23 14:43:05    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt
+2025-07-23 14:43:05    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt to the graph..
+2025-07-23 14:43:06    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt
+2025-07-23 14:43:06    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt to the graph - weight = 1.
+2025-07-23 14:43:09    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt
+2025-07-23 14:43:09    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt to the graph..
+2025-07-23 14:43:09    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt
+2025-07-23 14:43:09    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt to the graph - weight = 1.
+2025-07-23 14:43:13    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt
+2025-07-23 14:43:13    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt to the graph..
+2025-07-23 14:43:13    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt
+2025-07-23 14:43:13    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt to the graph - weight = 1.
+2025-07-23 14:43:13    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt
+2025-07-23 14:43:13    Feeding backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt to the graph..
+2025-07-23 14:43:13    Constructed backbone alignment map from /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt
+2025-07-23 14:43:13    Fed backbone /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt to the graph - weight = 1.
+2025-07-23 14:43:13    Wrote matrix to /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/graph.txt
+2025-07-23 14:43:13    Built the alignment graph in 116.91321849822998 sec..
+2025-07-23 14:43:13    Running MCL alignment graph clustering..
+2025-07-23 14:43:13    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/clusters.txt
+2025-07-23 14:43:13    Running an external tool, command: /home/genome/anaconda3/envs/TM-pipeline/lib/python3.13/site-packages/witch_msa/tools/magus/tools/mcl/bin/mcl /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/graph.txt --abc -o /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/temp_clusters.txt -I 4
+2025-07-23 14:43:14    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/clusters.txt
+2025-07-23 14:43:14    Clustered the graph in 0.6148908138275146 sec..
+2025-07-23 14:43:14    Purged duplicate clusters. Found 708 unique clusters..
+2025-07-23 14:43:14    Found 0 row violations and 430 column violations..
+2025-07-23 14:43:14    Finished violations sweep. Now 0 row violations and 0 column violations..
+2025-07-23 14:43:14    Purged cluster violations. Found 706 clean clusters..
+2025-07-23 14:43:14    Finding graph trace with minimum clusters heuristic search..
+2025-07-23 14:43:14    Reached new search frontier
+2025-07-23 14:43:14    {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+2025-07-23 14:43:14    Safe frontier reached.. dumping 0 from heap and resetting aggression..
+2025-07-23 14:43:14    Reached new search frontier
+2025-07-23 14:43:14    {0: 5, 1: 8, 2: 1, 3: 8, 4: 8, 5: 5, 6: 1}
+2025-07-23 14:43:14    Reached new search frontier
+2025-07-23 14:43:14    {0: 7, 1: 10, 2: 2, 3: 10, 4: 9, 5: 8, 6: 2}
+2025-07-23 14:43:14    Reached new search frontier
+2025-07-23 14:43:14    {0: 16, 1: 19, 2: 6, 3: 19, 4: 18, 5: 17, 6: 3}
+2025-07-23 14:43:15    Heap limit 5000 reached.. Truncating heap to last frontier
+2025-07-23 14:43:15    Increasing aggression to 1.2..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 17, 1: 20, 2: 7, 3: 20, 4: 19, 5: 18, 6: 4}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 18, 1: 21, 2: 8, 3: 21, 4: 20, 5: 19, 6: 5}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 19, 1: 22, 2: 9, 3: 22, 4: 21, 5: 20, 6: 6}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 60, 1: 63, 2: 49, 3: 59, 4: 62, 5: 61, 6: 18}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 203 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 105, 1: 109, 2: 93, 3: 104, 4: 99, 5: 105, 6: 64}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 128, 1: 152, 2: 136, 3: 131, 4: 105, 5: 132, 6: 90}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 24 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 138, 1: 159, 2: 143, 3: 141, 4: 111, 5: 142, 6: 99}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Safe frontier reached.. dumping 4 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 160, 1: 182, 2: 166, 3: 156, 4: 122, 5: 163, 6: 119}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 164, 1: 193, 2: 177, 3: 158, 4: 123, 5: 168, 6: 121}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 168, 1: 202, 2: 186, 3: 160, 4: 124, 5: 171, 6: 123}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 181, 1: 215, 2: 199, 3: 173, 4: 138, 5: 184, 6: 136}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 29 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 184, 1: 216, 2: 201, 3: 176, 4: 141, 5: 187, 6: 139}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 203, 1: 236, 2: 220, 3: 195, 4: 160, 5: 205, 6: 158}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 6 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 216, 1: 249, 2: 233, 3: 208, 4: 173, 5: 218, 6: 171}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 243, 1: 276, 2: 260, 3: 235, 4: 201, 5: 245, 6: 198}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 426, 1: 458, 2: 442, 3: 419, 4: 384, 5: 428, 6: 378}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 2 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 438, 1: 471, 2: 454, 3: 431, 4: 397, 5: 439, 6: 390}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 439, 1: 472, 2: 455, 3: 432, 4: 398, 5: 440, 6: 391}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 462, 1: 495, 2: 479, 3: 456, 4: 422, 5: 463, 6: 415}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 6 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 475, 1: 508, 2: 490, 3: 470, 4: 436, 5: 477, 6: 428}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 2 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 476, 1: 509, 2: 492, 3: 471, 4: 437, 5: 478, 6: 430}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 1 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 478, 1: 510, 2: 493, 3: 472, 4: 438, 5: 479, 6: 431}
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 525, 1: 558, 2: 538, 3: 516, 4: 485, 5: 527, 6: 478}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 39 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 576, 1: 606, 2: 588, 3: 561, 4: 535, 5: 579, 6: 522}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 2 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 595, 1: 625, 2: 606, 3: 580, 4: 554, 5: 598, 6: 538}
+2025-07-23 14:43:15    Safe frontier reached.. dumping 12 from heap and resetting aggression..
+2025-07-23 14:43:15    Reached new search frontier
+2025-07-23 14:43:15    {0: 612, 1: 638, 2: 619, 3: 595, 4: 571, 5: 611, 6: 544}
+2025-07-23 14:43:15    Found alignment graph trace in 1.2304012775421143 sec..
+2025-07-23 14:43:15    Found a trace with 766 clusters and a total cost of 11016015
+2025-07-23 14:43:15    Skipping optimization pass..
+2025-07-23 14:43:15    Finished optimization in 2.0265579223632812e-05 sec..
+2025-07-23 14:43:15    Uncompressed alignment will have 280500 cells..
+2025-07-23 14:43:15    Assembling final alignment in /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_1.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_1.txt
+2025-07-23 14:43:15    Appending induced alignment, 47 sequences of length 1375..
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_2.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_2.txt
+2025-07-23 14:43:15    Appending induced alignment, 26 sequences of length 1375..
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_5.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_5.txt
+2025-07-23 14:43:15    Appending induced alignment, 26 sequences of length 1375..
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_4.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_4.txt
+2025-07-23 14:43:15    Appending induced alignment, 26 sequences of length 1375..
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_3.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_3.txt
+2025-07-23 14:43:15    Appending induced alignment, 28 sequences of length 1375..
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_7.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_7.txt
+2025-07-23 14:43:15    Appending induced alignment, 29 sequences of length 1375..
+2025-07-23 14:43:15    Running a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_6.txt
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_6.txt
+2025-07-23 14:43:15    Appending induced alignment, 22 sequences of length 1375..
+2025-07-23 14:43:15    Wrote final alignment to /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:43:15    Merged 7 subalignments into /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta in 118.93082809448242 sec..
+2025-07-23 14:43:15    Completed a task, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:43:15    Waiting for 0 tasks to finish..
+2025-07-23 14:43:15    MAGUS finished in 158.84414339065552 seconds..

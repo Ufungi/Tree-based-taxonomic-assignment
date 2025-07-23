@@ -1,0 +1,11 @@
+Time to align the backbone (s): 159.11653113365173
+Time to estimate the backbone tree (s): 10.889283418655396
+(DecompositionAlgorithm.decomposition) Time to decompose the backbone (s): 0.8940978050231934
+(SearchAlgorithm.search) Time to run all-against-all HMMSearches (s): 0.21532249450683594
+(loadSubQueries) Time to split queries (s): 0.23154950141906738
+(rankBitscores) Time to rank bit-scores (s) 0.11344575881958008
+(writeWeights) Time to obtain weights given bitscores (s): 0.006983757019042969
+(alignSubQueriesNew, i=0) Time to obtain constraint/backbones  (s): 0.47902917861938477
+(alignSubQueriesNew, i=0) Time to run alignment and clean-up  (s): 1.5573997497558594
+(submitAndCollectFutures) Time to collect futures and write checkpoints (s): 0.0012378692626953125
+Time to merge all outputs (s): 0.01556396484375

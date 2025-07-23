@@ -1,0 +1,123 @@
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: AMD Ryzen Threadripper PRO 5975WX 32-Cores, 32 cores, 503 GB RAM
+
+RAxML-NG was called at 23-Jul-2025 14:44:07 as follows:
+
+raxml-ng --prefix /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta --evaluate --brlen scaled --model GTR --redo --msa /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/Agaricales_DB_aligned.fasta --tree /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_resolved.tree -threads 32 --outgroup NR_103631, NR_178158, NR_152951, NR_111682, NR_103638, NR_103641
+
+Analysis options:
+  run mode: Evaluate tree likelihood
+  start tree(s): user
+  outgroup taxa: NR_103631
+  random seed: 1753249447
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 0.100000, brlen-triplet: 1000.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (32 threads), thread pinning: OFF
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
+
+[00:00:00] Reading alignment from file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/Agaricales_DB_aligned.fasta
+[00:00:00] Loaded alignment with 205 taxa and 1456 sites
+
+WARNING: Fully undetermined columns found: 13
+
+WARNING: Sequences KP885635 and KP885634 are exactly identical!
+WARNING: Sequences MK116600 and MK116597 are exactly identical!
+WARNING: Sequences MK116600 and MK116599 are exactly identical!
+WARNING: Sequences GQ329041 and GQ329051 are exactly identical!
+WARNING: Sequences KJ701794 and KJ701795 are exactly identical!
+WARNING: Sequences FM208862 and FM208878 are exactly identical!
+WARNING: Sequences KC842418 and AJ236064 are exactly identical!
+WARNING: Sequences AY669595 and MN751485 are exactly identical!
+WARNING: Sequences AY669595 and FJ157088 are exactly identical!
+WARNING: Sequences AY669595 and KY287712 are exactly identical!
+WARNING: Sequences AY669595 and AF389165 are exactly identical!
+WARNING: Sequences AY669595 and MN751482 are exactly identical!
+WARNING: Sequences AY669595 and FJ157090 are exactly identical!
+WARNING: Sequences AY669595 and FJ157142 are exactly identical!
+WARNING: Sequences AY669595 and MW845282 are exactly identical!
+WARNING: Sequences AY899265 and DQ182509 are exactly identical!
+WARNING: Sequences KP229416 and KP229417 are exactly identical!
+WARNING: Sequences AY899276 and AY899275 are exactly identical!
+WARNING: Sequences AY899276 and AY899274 are exactly identical!
+WARNING: Sequences AY899276 and AY899273 are exactly identical!
+WARNING: Sequences AY899276 and NR_119528 are exactly identical!
+WARNING: Sequences NR_138007 and KT284912 are exactly identical!
+WARNING: Sequences AY899271 and KM657923 are exactly identical!
+WARNING: Sequences AY899271 and KM657925 are exactly identical!
+WARNING: Sequences MH997904 and MH997905 are exactly identical!
+WARNING: Sequences MG734719 and MG734720 are exactly identical!
+WARNING: Sequences MG734725 and NR_160505 are exactly identical!
+WARNING: Sequences MG734742 and MG734714 are exactly identical!
+WARNING: Sequences MH366629 and MH366628 are exactly identical!
+WARNING: Sequences MH366629 and MH366627 are exactly identical!
+WARNING: Duplicate sequences found: 30
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 1112 patterns
+
+Partition 0: noname
+Model: GTR+FO
+Alignment sites / patterns: 1443 / 1112
+Gaps: 59.32 %
+Invariant sites: 39.02 %
+
+
+NOTE: Binary MSA file created: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 32 thread(s)
+
+[00:00:00] Loading user starting tree(s) from: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_resolved.tree
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 35 / 140
+[00:00:00] Data distribution: max. searches per worker: 1
+
+Evaluating 1 trees
+
+[00:00:00] Tree #1, initial LogLikelihood: -30489.446563
+
+[00:00:00 -30489.446563] Initial branch length optimization
+[00:00:00 -26124.683549] Model parameter optimization (eps = 0.100000)
+
+[00:00:00] Tree #1, final logLikelihood: -25443.829885
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: NONE
+   Base frequencies (ML): 0.268860 0.202535 0.212075 0.316531 
+   Substitution rates (ML): 1.049974 2.424121 1.295638 0.618725 3.006564 1.000000 
+
+
+Final LogLikelihood: -25443.829885
+
+AIC score: 51717.659771 / AICc score: 52053.862302 / BIC score: 53906.568787
+Free parameters (model + branch lengths): 415
+
+WARNING: Best ML tree contains 39 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta.raxml.bestTreeCollapsed
+Best ML tree saved to: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta.raxml.bestTree
+Optimized model saved to: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta.raxml.bestModel
+
+Execution log saved to: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/tree/Agaricales_DB_aligned.fasta.raxml.log
+
+Analysis started: 23-Jul-2025 14:44:07 / finished: 23-Jul-2025 14:44:08
+
+Elapsed time: 0.734 seconds
+

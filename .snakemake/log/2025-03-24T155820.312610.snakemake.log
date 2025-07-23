@@ -1,0 +1,67 @@
+localrules directive specifies rules that are not present in the Snakefile:
+	copybb
+	trimcollect
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+decompose        1
+stitch           1
+total            3
+
+Select jobs to execute...
+
+[Mon Mar 24 15:58:20 2025]
+checkpoint decompose:
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement.jplace, /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/trimmed
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk
+    jobid: 2
+    benchmark: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/benchmarks/decompose.txt
+    reason: Missing output files: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk
+    resources: tmpdir=/tmp, cpus=32, mem_mb=160000, mem_mib=152588
+DAG of jobs will be updated after completion.
+
+[Mon Mar 24 15:59:16 2025]
+Error in rule decompose:
+    jobid: 2
+    input: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement.jplace, /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/trimmed
+    output: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk
+    shell:
+        
+            (
+            cp /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement.jplace /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance
+            if [ "500" == "auto" ]; then
+                numq=`grep ">" /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement/query.fa  | wc -l`
+                numbb=`grep ">" /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement/backbone.fa  | wc -l`
+                clustsz=`python -c "import math; print(int(min(2500,round(8*math.sqrt($numbb)+3*math.sqrt($numq),-2))))"`
+                echo "Cluster size is set to $clustsz (automatically)"
+            else
+                clustsz="500"
+                echo "Cluster size is set to $clustsz (user-choice)"
+            fi
+            if [ "nuc" == "nuc" ]; then
+                python run_udance.py decompose -s /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/trimmed -o /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance -t $clustsz -j /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement.jplace                 -m raxml-ng -T 32 -l 300 -f 150 -e 0.02                 --minplacements 0
+            else
+                python run_udance.py decompose -p -s /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/trimmed -o /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance -t $clustsz -j /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/placement.jplace                 -m raxml-ng -T 32 -l 300 -f 150 -e 0.02                 --minplacements 0
+            fi
+            python prune_similar.py -T 32 -o /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance -S 9000
+            if [  -f /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/dedupe_map.txt ]; then 
+                cat /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/dedupe_map.txt > /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/dedupe_map.txt 
+            fi 
+            if [ -f /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/rm_map.txt ]; then 
+                cat /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/rm_map.txt >> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/dedupe_map.txt 
+            fi
+            ) >> /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/udance.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job decompose since they might be corrupted:
+/data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-03-24T155820.312610.snakemake.log

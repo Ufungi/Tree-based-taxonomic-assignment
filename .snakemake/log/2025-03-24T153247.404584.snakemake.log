@@ -1,0 +1,13 @@
+localrules directive specifies rules that are not present in the Snakefile:
+	trimcollect
+	copybb
+
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+/data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/bacteria/out/refine/output/udance/color_spanning_tree.nwk

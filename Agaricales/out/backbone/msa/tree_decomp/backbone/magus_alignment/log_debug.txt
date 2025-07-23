@@ -1,0 +1,99 @@
+2025-07-23 14:40:36    Starting up the task manager..
+2025-07-23 14:40:36    Task manager is up..
+2025-07-23 14:40:36    Launched a new task.. 0/32 threads used, type: runAlignmentTask, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:40:36    Launched 1 tasks and deferred 0 tasks..
+2025-07-23 14:41:16    Launched a new task.. 0/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_2.txt
+2025-07-23 14:41:16    Launched 1 tasks and deferred 6 tasks..
+2025-07-23 14:41:16    Launched a new task.. 1/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt
+2025-07-23 14:41:16    Launched 1 tasks and deferred 9 tasks..
+2025-07-23 14:41:18    Launched a new task.. 1/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_1.txt
+2025-07-23 14:41:18    Launched 1 tasks and deferred 5 tasks..
+2025-07-23 14:41:18    Launched a new task.. 2/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt
+2025-07-23 14:41:18    Launched 1 tasks and deferred 8 tasks..
+2025-07-23 14:41:23    Launched a new task.. 3/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_4.txt
+2025-07-23 14:41:23    Launched 1 tasks and deferred 4 tasks..
+2025-07-23 14:41:23    Launched a new task.. 3/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt
+2025-07-23 14:41:23    Launched 1 tasks and deferred 7 tasks..
+2025-07-23 14:41:23    Launched a new task.. 4/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt
+2025-07-23 14:41:23    Launched 1 tasks and deferred 6 tasks..
+2025-07-23 14:41:26    Launched a new task.. 4/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_3.txt
+2025-07-23 14:41:26    Launched 1 tasks and deferred 3 tasks..
+2025-07-23 14:41:26    Launched a new task.. 5/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt
+2025-07-23 14:41:26    Launched 1 tasks and deferred 5 tasks..
+2025-07-23 14:41:30    Launched a new task.. 5/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt
+2025-07-23 14:41:30    Launched 1 tasks and deferred 4 tasks..
+2025-07-23 14:41:30    Launched a new task.. 6/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt
+2025-07-23 14:41:30    Launched 1 tasks and deferred 3 tasks..
+2025-07-23 14:41:35    Launched a new task.. 7/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_5.txt
+2025-07-23 14:41:35    Launched 1 tasks and deferred 2 tasks..
+2025-07-23 14:41:40    Launched a new task.. 8/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_6.txt
+2025-07-23 14:41:40    Launched 1 tasks and deferred 1 tasks..
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_5.txt, status RUNNING
+2025-07-23 14:41:40    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta, status N/A
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_5.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_6.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_7.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt
+2025-07-23 14:41:40    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt
+2025-07-23 14:41:42    Launched a new task.. 8/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt
+2025-07-23 14:41:42    Launched 1 tasks and deferred 2 tasks..
+2025-07-23 14:41:42    Launched a new task.. 9/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt
+2025-07-23 14:41:42    Launched 1 tasks and deferred 1 tasks..
+2025-07-23 14:41:44    Launched a new task.. 9/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt
+2025-07-23 14:41:44    Launched 1 tasks and deferred 0 tasks..
+2025-07-23 14:41:49    Launched a new task.. 10/32 threads used, type: runCommand, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/subalignments/subalignment_subset_7.txt
+2025-07-23 14:41:49    Launched 1 tasks and deferred 0 tasks..
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta, status N/A
+2025-07-23 14:42:44    Still running task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt, status RUNNING
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/backbone.aln.fasta
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_8_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_7_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_9_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_10_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_1_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_4_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_6_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_2_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_3_mafft.txt
+2025-07-23 14:42:44    Still waiting on task /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/backbone_5_mafft.txt
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_1.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 6 tasks..
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_2.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 5 tasks..
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_5.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 4 tasks..
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_4.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 3 tasks..
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_3.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 2 tasks..
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_7.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 1 tasks..
+2025-07-23 14:43:15    Launched a new task.. 0/32 threads used, type: buildInducedSubalignment, output file: /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/backbone/msa/tree_decomp/backbone/magus_alignment/graph/induced_subalignment_subset_6.txt
+2025-07-23 14:43:15    Launched 1 tasks and deferred 0 tasks..
+2025-07-23 14:43:15    Winding down the task manager..
+2025-07-23 14:43:15    Task manager stopped..

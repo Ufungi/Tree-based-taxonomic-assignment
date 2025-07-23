@@ -1,0 +1,68 @@
+{
+  "sample": "query",
+  "gappa": "v0.9.0",
+  "invocation": "gappa prepare chunkify --fasta-path /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/in/query.fasta --chunk-size 500 --chunks-out-dir /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/place --abundances-out-dir /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/place --threads 32",
+  "hash": "SHA1",
+  "abundances": [
+    [ "2632c711adec2463fbf87f3e58e13d7382116cb4", 0, {
+      "SFC20150904-39": 1
+    }],
+    [ "e24c2325316f51919a210105d4157b2dc460505f", 0, {
+      "SFC20210902-20": 1
+    }],
+    [ "d3f6913351a356806cbc477bb2ad3d5d75901afc", 0, {
+      "SFC20200916-40": 1
+    }],
+    [ "33c80548dc0bb797f8efe8cdd61960a1cbbe3980", 0, {
+      "SFC20180911-10": 1
+    }],
+    [ "c75445b40b26a92ebdf65f3621d03aa20aa3d699", 0, {
+      "SFC20170713-09": 1
+    }],
+    [ "abd07377388200ae910b488ae66bdd75c8e5c05b", 0, {
+      "SFC20180915-03": 1
+    }],
+    [ "b47c3595ced99331cadae09007d4d60fdd96ca46", 0, {
+      "SFC20170726-82": 1
+    }],
+    [ "c922440551b512d1776fa1bb27918d3b941eb844", 0, {
+      "SFC20190619-05": 1
+    }],
+    [ "2b50e6030b68a188b67dfb87a0d6692fafe4f8d0", 0, {
+      "SFC20200716-04": 1
+    }],
+    [ "3959b5c94a2a54f28354f34064fc82f98d812a6f", 0, {
+      "SFC20180907-90": 1
+    }],
+    [ "4ff03d89c87e674311f7aa6370a9be17e4b685c8", 0, {
+      "SFC20160907-32": 1
+    }],
+    [ "c551176eaa33d4cc63d45481cb4afbf2bb6d374e", 0, {
+      "SFC20200716-19": 1
+    }],
+    [ "e92a3761a1b89ccb5095c7c720f90e154bfc8366", 0, {
+      "SFC20180705-35": 1
+    }],
+    [ "3110ec71e9b67c65178299e4072115176aaddd9e", 0, {
+      "SFC20140828-02": 1
+    }],
+    [ "20e909b0b95ce2179d49e5f092b5184608b473cb", 0, {
+      "SFC20180905-83": 1
+    }],
+    [ "bc90f35fb1ad11f14e39c5f94cd0f09abd4f1720", 0, {
+      "SFC20180704-90": 1
+    }],
+    [ "7a81a64dd76ddfa463725fe075ef4dbd927e8172", 0, {
+      "SFC20180905-71": 1
+    }],
+    [ "0cf120b7307acf809d5ca7c6a8762feb62d45f72", 0, {
+      "SFC20130807-33": 1
+    }],
+    [ "8eb80f96ec356efe98b79ae4d60a446728c5dd9c", 0, {
+      "SFC20200716-08": 1
+    }],
+    [ "1d0a915c9042b966228db113da18773300833a3d", 0, {
+      "SFC20140723-12": 1
+    }]
+  ]
+}

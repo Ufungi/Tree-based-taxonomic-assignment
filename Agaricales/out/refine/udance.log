@@ -1,0 +1,5 @@
+Cluster size is set to 500 (user-choice)
+0 fragmentary sequences are removed from gene backbone on partition /data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/Agaricales/out/refine/output/udance/0.
+0 225
+/home/genome/anaconda3/envs/udance/lib/python3.9/site-packages/treeswift/Tree.py:1090: UserWarning: TreeSwift's rerooting functionality is poorly tested and likely has bugs. It will be fixed in a future release
+  warn("TreeSwift's rerooting functionality is poorly tested and likely has bugs. It will be fixed in a future release")

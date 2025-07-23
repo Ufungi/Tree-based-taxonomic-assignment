@@ -1,0 +1,98 @@
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: AMD Ryzen Threadripper PRO 5975WX 32-Cores, 32 cores, 503 GB RAM
+
+RAxML-NG was called at 23-Jul-2025 14:44:34 as follows:
+
+raxml-ng --msa shrunk.aln --tree pars{1} --model GTR+G --threads 1 --seed 1 --prefix RUN --lh-epsilon 0.5
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): parsimony (1)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 0.500000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), NONE/sequential
+
+[00:00:00] Reading alignment from file: shrunk.aln
+[00:00:00] Loaded alignment with 194 taxa and 1262 sites
+
+Alignment comprises 1 partitions and 950 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 1262 / 950
+Gaps: 52.09 %
+Invariant sites: 32.33 %
+
+
+NOTE: Binary MSA file created: RUN.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
+
+[00:00:00] Generating 1 parsimony starting tree(s) with 194 taxa
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 950 / 15200
+[00:00:00] Data distribution: max. searches per worker: 1
+
+Starting ML tree search with 1 distinct starting trees
+
+[00:00:00 -30344.357448] Initial branch length optimization
+[00:00:00 -24806.385878] Model parameter optimization (eps = 10.000000)
+[00:00:01 -23870.853977] AUTODETECT spr round 1 (radius: 5)
+[00:00:04 -23733.721873] AUTODETECT spr round 2 (radius: 10)
+[00:00:11 -23733.701999] SPR radius for FAST iterations: 5 (autodetect)
+[00:00:11 -23733.701999] Model parameter optimization (eps = 3.000000)
+[00:00:11 -23733.038639] FAST spr round 1 (radius: 5)
+[00:00:13 -23713.103156] FAST spr round 2 (radius: 5)
+[00:00:15 -23713.102171] Model parameter optimization (eps = 1.000000)
+[00:00:15 -23712.918213] SLOW spr round 1 (radius: 5)
+[00:00:20 -23708.235654] SLOW spr round 2 (radius: 5)
+[00:00:25 -23708.235233] SLOW spr round 3 (radius: 10)
+[00:00:31 -23708.235222] SLOW spr round 4 (radius: 15)
+[00:00:47 -23708.235222] SLOW spr round 5 (radius: 20)
+[00:01:01 -23708.235222] SLOW spr round 6 (radius: 25)
+[00:01:05 -23708.235222] Model parameter optimization (eps = 0.100000)
+
+[00:01:05] ML tree search #1, logLikelihood: -23708.185989
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.586089 (ML),  weights&rates: (0.250000,0.050252) (0.250000,0.304451) (0.250000,0.874053) (0.250000,2.771244) 
+   Base frequencies (ML): 0.262716 0.184408 0.214048 0.338828 
+   Substitution rates (ML): 1.345971 3.533549 1.563551 0.699670 4.569653 1.000000 
+
+
+Final LogLikelihood: -23708.185989
+
+AIC score: 48204.371978 / AICc score: 48563.380052 / BIC score: 50229.710477
+Free parameters (model + branch lengths): 394
+
+WARNING: Best ML tree contains 30 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /tmp/processmarkerM8XeRx/1/RUN.raxml.bestTreeCollapsed
+Best ML tree saved to: /tmp/processmarkerM8XeRx/1/RUN.raxml.bestTree
+Optimized model saved to: /tmp/processmarkerM8XeRx/1/RUN.raxml.bestModel
+
+Execution log saved to: /tmp/processmarkerM8XeRx/1/RUN.raxml.log
+
+Analysis started: 23-Jul-2025 14:44:34 / finished: 23-Jul-2025 14:45:40
+
+Elapsed time: 65.413 seconds
+
