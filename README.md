@@ -1,5 +1,3 @@
-This is a Snakemake-based pipeline for phylogenetic analysis of fungal markers. It has been tested on Agaricales and is customizable via a configuration file.
-
 # 1. Requirements
 conda
 
