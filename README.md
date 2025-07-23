@@ -1,38 +1,37 @@
 This is a Snakemake-based pipeline for phylogenetic analysis of fungal markers. It has been tested on Agaricales and is customizable via a configuration file.
 
-1. Requirements
+# 1. Requirements
 conda
 
 A modified fork of udance
 
 You must use the forked version that includes changes to udance.smk and process_a_marker.sh.
 
-2. Setup
+git clone https://github.com/<your-username>/udance.git
+cd udance
+Follow installation instructions in udance repo (e.g., pip install -e . or setup.sh)
+
+# 2. Setup
 Clone this repository and your modified udance repository.
 
 Create and activate the conda environment:
 
-bash
-복사
-편집
-conda env create -f environment.yaml
+**conda env create -f environment.yaml
 conda activate phylo_env
-Install your modified udance manually. Do not install the original udance.
+Install your modified udance manually. Do not install the original udance.**
 
-3. Configuration
+# 3. Configuration
 Edit config.yaml to set your markers, number of threads, and input/output paths.
 This file controls all behavior of the pipeline and is required before running.
 
-4. Run
+# 4. Run
 Use the provided shell script to launch the workflow:
 
-bash
-복사
-편집
-bash run.sh
+**bash run.sh
 This script reads from config.yaml and starts the Snakemake pipeline accordingly.
+**
 
-5. Example Dataset
+# 5. Example Dataset
 The Agaricales/ folder contains a minimal example input.
 You can test the pipeline by using its configuration and marker files.
 
