@@ -1,7 +1,7 @@
 # 1. Requirements
 
 - `conda`  
-- `udance`
+- `udance` (modified version)
 
 You **must use** the forked version that includes changes to:
 - `udance.smk`
