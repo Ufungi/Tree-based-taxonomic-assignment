@@ -31,9 +31,6 @@ conda activate phylo_env
 Rscript -e "install.packages(c('MonoPhy', 'treestats') repos='https://cloud.r-project.org')"
 ```
 
-Then install your **modified `udance` manually**.  
-Do **not** install the original `udance`.
-
 ---
 
 # 3. Configuration
