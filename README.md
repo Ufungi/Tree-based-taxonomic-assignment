@@ -51,6 +51,4 @@ This file controls all behavior of the pipeline.
 bash run.sh
 ```
 
-This script reads from `config.yaml` and starts the pipeline.
-
 ---
