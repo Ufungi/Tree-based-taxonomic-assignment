@@ -8,13 +8,10 @@ You **must use** the forked version that includes changes to:
 - `process_a_marker.sh`
 
 ```bash
-git clone https://github.com/<your-username>/udance.git
-cd udance
+git clone https://github.com/Ufungi/uDance.git
 # Follow the installation instructions in the udance repo:
-# e.g., 
-pip install -e .
-# or
-./setup.sh
+cd uDance
+bash install.sh
 ```
 
 ---
