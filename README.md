@@ -29,9 +29,12 @@ This pipeline requires three input files:
 
 Make sure paths to these files are correctly set in config.yaml.
 
+The `Agaricales/` folder contains a minimal example input.  
+You can test the pipeline using its configuration and marker files.
+
 ---
 
-# 2. Configuration
+# 3. Configuration
 
 Edit `config.yaml` to set:
 - marker genes
@@ -42,7 +45,7 @@ This file controls all behavior of the pipeline.
 
 ---
 
-# 3. Run
+# 4. Run
 
 ```bash
 bash run.sh
@@ -51,8 +54,3 @@ bash run.sh
 This script reads from `config.yaml` and starts the pipeline.
 
 ---
-
-# 4. Example Dataset
-
-The `Agaricales/` folder contains a minimal example input.  
-You can test the pipeline using its configuration and marker files.
