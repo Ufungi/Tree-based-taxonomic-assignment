@@ -23,11 +23,9 @@ bash install.sh
 
 This pipeline requires three input files:
 
-query.fasta: Query sequences to be placed and classified
-
-prefix_DB.fasta: Reference backbone sequences for phylogenetic placement
-
-taxonomy.txt: Taxonomic information corresponding to reference sequences
+- query.fasta: Query sequences to be placed and classified
+- prefix_DB.fasta: Reference backbone sequences for phylogenetic placement
+- taxonomy.txt: Taxonomic information corresponding to reference sequences
 
 Make sure paths to these files are correctly set in config.yaml.
 
