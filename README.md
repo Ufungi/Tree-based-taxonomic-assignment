@@ -7,7 +7,7 @@ Set conda environment
 ```bash
 git clone https://github.com/Ufungi/Tree-based-taxonomic-assignment
 conda env create -f environment.yaml
-conda activate phylo_env
+conda activate TM-pipeline
 Rscript -e "install.packages(c('MonoPhy', 'treestats'), repos='https://cloud.r-project.org')"
 ```
 
