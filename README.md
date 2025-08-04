@@ -6,11 +6,14 @@ git clone https://github.com/Ufungi/Tree-based-taxonomic-assignment
 conda env create -f environment.yaml
 conda activate phylo_env
 Rscript -e "install.packages(c('MonoPhy', 'treestats'), repos='https://cloud.r-project.org')"
+```
 
-# Intsall modified uDance
+Install modified uDance
+```
 git clone https://github.com/Ufungi/uDance.git
 cd uDance
 bash install.sh
+```
 ---
 
 # 2. Configuration
