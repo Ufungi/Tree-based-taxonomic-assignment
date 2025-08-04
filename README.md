@@ -1,3 +1,5 @@
+This pipeline performs phylogenetic placement of query sequences onto a backbone tree, refines the tree structure via divide-and-conquer methods, clusters tips into phylotypes with monophyly verification, and assigns taxonomy using a custom tree-walking algorithm to provide accurate taxonomic annotation of input sequences.
+
 # 1. Installation
 Clone **this repository** and **modified `udance`** repository.
 
@@ -15,6 +17,20 @@ git clone https://github.com/Ufungi/uDance.git
 cd uDance
 bash install.sh
 ```
+---
+
+# 2. Input files
+
+This pipeline requires three input files:
+
+query.fasta: Query sequences to be placed and classified
+
+prefix_DB.fasta: Reference backbone sequences for phylogenetic placement
+
+taxonomy.txt: Taxonomic information corresponding to reference sequences
+
+Make sure paths to these files are correctly set in config.yaml.
+
 ---
 
 # 2. Configuration
