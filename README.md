@@ -1,5 +1,9 @@
 This pipeline performs phylogenetic placement of query sequences onto a backbone tree, refines the tree structure via divide-and-conquer methods, clusters tips into phylotypes with monophyly verification, and assigns taxonomy using a custom tree-walking algorithm to provide accurate taxonomic annotation of input sequences.
 
+# 0. Prerequisites
+* Linux environment (tested on Ubuntu 20.04)
+* [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) environment
+
 # 1. Installation
 Clone **this repository** and **modified `udance`** repository.
 
