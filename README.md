@@ -1,36 +1,19 @@
-# 1. Requirements
-
-- `conda`  
-- `udance` (modified version)
-
-You **must use** the forked version that includes changes to:
-- `udance.smk`
-- `process_a_marker.sh`
-
-```bash
-git clone https://github.com/Ufungi/uDance.git
-# Follow the installation instructions in the udance repo:
-cd uDance
-bash install.sh
-```
-
----
-
-# 2. Setup
-
+# 1. Installation
 Clone **this repository** and your **modified `udance`** repository.
 
-Create and activate the conda environment:
-
 ```bash
+git clone https://github.com/Ufungi/Tree-based-taxonomic-assignment
 conda env create -f environment.yaml
 conda activate phylo_env
-Rscript -e "install.packages(c('MonoPhy', 'treestats') repos='https://cloud.r-project.org')"
-```
+Rscript -e "install.packages(c('MonoPhy', 'treestats'), repos='https://cloud.r-project.org')"
 
+# Intsall modified uDance
+git clone https://github.com/Ufungi/uDance.git
+cd uDance
+bash install.sh
 ---
 
-# 3. Configuration
+# 2. Configuration
 
 Edit `config.yaml` to set:
 - your markers
@@ -41,7 +24,7 @@ This file **controls all behavior** of the pipeline and **must be configured** b
 
 ---
 
-# 4. Run
+# 3. Run
 
 Use the provided shell script to launch the workflow:
 
@@ -49,21 +32,11 @@ Use the provided shell script to launch the workflow:
 bash run.sh
 ```
 
-This script reads from `config.yaml` and starts the **Snakemake** pipeline accordingly.
+This script reads from `config.yaml` and starts the pipeline.
 
 ---
 
-# 5. Example Dataset
+# 4. Example Dataset
 
 The `Agaricales/` folder contains a **minimal example input**.  
 You can test the pipeline using its configuration and marker files.
-
----
-
-# Notes
-
-- `run.sh` is **tightly coupled** to `config.yaml`.  
-  ✅ Be sure to review all paths and options.
-
-- ❗ Only use your **modified** `udance`.  
-  Installing the original version will **result in errors**.
