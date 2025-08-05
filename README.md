@@ -10,9 +10,11 @@ Clone **this repository** and **modified `udance`** repository.
 Set conda environment
 ```bash
 git clone https://github.com/Ufungi/Tree-based-taxonomic-assignment
+cd Tree-based-taxonomic-assignment
 conda env create -f environment.yaml
 conda activate TM-pipeline
 Rscript -e "install.packages(c('MonoPhy', 'treestats'), repos='https://cloud.r-project.org')"
+cd ..
 ```
 
 Install modified uDance conda environment
