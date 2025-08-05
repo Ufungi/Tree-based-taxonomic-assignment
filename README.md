@@ -19,7 +19,7 @@ Install modified uDance conda environment
 ```
 git clone https://github.com/Ufungi/uDance.git
 cd uDance
-bash install.sh
+bash -l install.sh
 ```
 ---
 
