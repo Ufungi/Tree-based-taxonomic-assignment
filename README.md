@@ -23,9 +23,9 @@ cd uDance
 bash -l install.sh
 ```
 ---
-
-# 2. Input files
 ### All processes below should be done in "Tree-based-taxonomic-assignment" directory
+# 2. Input files
+
 
 This pipeline requires three input files:
 
