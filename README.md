@@ -25,7 +25,7 @@ bash -l install.sh
 ---
 
 # 2. Input files
-## All processes below should be done in "Tree-based-taxonomic-assignment" directory
+### All processes below should be done in "Tree-based-taxonomic-assignment" directory
 
 This pipeline requires three input files:
 
