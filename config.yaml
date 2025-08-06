@@ -14,13 +14,14 @@ witch: ./witch.py  # Change this path to WITCH (which witch.py)
 udance: ./uDance  # Change this path to uDance
 fastroot: ./FastRoot.py  # Change this path to FastRoot (which FastRoot.py)
 
-####
-
-## AUTO-GENERATED PARAMETERS (based on values above)
 # Path to the input files
 in: ${wdr}/${organism}/in  # in directory
 db_fasta: ${wdr}/${organism}/in/${db_prefix}.fasta  # Database file
 query_fasta: ${wdr}/${organism}/in/query.fasta  # Query file. No special characters (including underscores) are allowed
+
+####
+
+## AUTO-GENERATED PARAMETERS (based on values above)
 
 # Path to the output files
 out: ${wdr}/${organism}/out  # Output directory
