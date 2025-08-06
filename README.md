@@ -45,9 +45,13 @@ https://www.tandfonline.com/doi/full/10.1080/12298093.2022.2097364
 # 3. Configuration
 
 Edit `config.yaml` to set:
-- marker genes
-- number of threads
-- input/output paths
+- organism: Target organism or group name
+- db_prefix: Prefix for input database FASTA
+- threads: Number of threads to use
+- chunk_size: Number of sequences per chunk
+- outgroup: Comma-separated list of outgroup sequence IDs
+- wdr: Working directory path
+- witch, udance, fastroot: Paths to external tools
 
 This file controls all behavior of the pipeline.
 
