@@ -40,6 +40,8 @@ You can test the pipeline using its configuration and marker files.
 This example reproduces the results of Yoo et al. (2022), where genus-level classifications were fully consistent and all but one species-level classification matched the original study.
 https://www.tandfonline.com/doi/full/10.1080/12298093.2022.2097364
 
+The `Bacteria/` and `Fungi/` folders contain bacterial and fungal sequences used in the study `Cross-study discovery of functionally distinct core microbes of Tricholoma matsutake`
+
 ---
 
 # 3. Configuration
