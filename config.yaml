@@ -5,14 +5,14 @@
 organism: Agaricales # Change input organism name
 db_prefix: Agaricales_DB # Change prefix for the database files
 threads: 32 # Change number of threads to use
-chunk_size: 500 # Change number of sequences to process in each chunk
+chunk_size: 500 # Change number of sequences to process in each chunk (or auto)
 outgroup: NR_103631, NR_178158, NR_152951, NR_111682, NR_103638, NR_103641 # Change outgroup for raxml-ng
 
 # Path to working directory and external tools
-wdr: ./Tree-based-taxonomic-assignment  # Change this path to working directory
-witch: ./witch.py  # Change this path to WITCH (which witch.py)
-udance: ./uDance  # Change this path to uDance
-fastroot: ./FastRoot.py  # Change this path to FastRoot (which FastRoot.py)
+wdr: ./Tree-based-taxonomic-assignment  # Change this path to working directory (cloned folder from github)
+witch: /path/to/witch.py  # Change this path to WITCH (which witch.py)
+udance: /path/to/uDance  # Change this path to uDance
+fastroot: /path/to/FastRoot.py  # Change this path to FastRoot (which FastRoot.py)
 
 # Path to the input files
 in: ${wdr}/${organism}/in  # in directory
