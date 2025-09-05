@@ -24,6 +24,8 @@ mkdir -p ${out}/refine
 mkdir -p ${out}/cluster
 mkdir -p ${out}/taxonomy
 
+fixed_jplace="${out}/place/query.jplace"
+
 # Set log file
 echo "Pipeline started at $(date)" > ${log_file}
 
