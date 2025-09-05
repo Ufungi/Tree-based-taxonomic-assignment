@@ -102,6 +102,18 @@ phylogenetic_placement() {
     fi
 
 # Chunkify the query sequences
+
+# Calculate chunk_size if set to 'auto' 
+if [[ "$chunk_size" == "auto" ]]; then
+    n=$(grep -c "^>" "${db_fasta}")
+    if (( n / 5 > 500 )); then
+        chunk_size=500
+    else
+        chunk_size=$(( n / 5 ))
+    fi
+    export chunk_size
+    echo "chunk_size set to $chunk_size"
+fi
     chunk_exists=$(ls ${out}/place/chunk_*.fasta 2>/dev/null | wc -l)
     if [ "$chunk_exists" -gt 0 ]; then
         echo "Chunk files already exist. Skipping chunkify step." | tee -a ${log_file}
@@ -156,15 +168,42 @@ phylogenetic_placement() {
 }
 
 fix_jplace_file() {
+   
+echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
+    
+    # Try to examine original file first and fix if needed
+    if ! gappa examine info --jplace-path ${out}/place/query.jplace; then
+        # Remove entries with nan values
+        sed -e ':a' -e 'N' -e '$!ba' \
+            -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\],\s*"nm":\s*\[\s*\[\s*"ASV",[^]]*\]\s*\]\s*}//g' \
+            ${out}/place/query.jplace > ${out}/place/query.clean.jplace
+        
+        # Verify the fixed file
+        if ! gappa examine info --jplace-path ${out}/place/query.clean.jplace; then
+            echo "Error persists in query.clean.jplace. Manual intervention required." | tee -a ${log_file}
+            exit 1
+        fi
 
-echo "Split multiplicity..." | tee -a ${log_file}
+        echo "File query.clean.jplace has been fixed and is ready for processing." | tee -a ${log_file}
+    else
+        echo "File query.jplace passed validation and is ready for processing." | tee -a ${log_file}
+    fi
+
+        # Define final jplace file to use
+    if [ -f "${out}/place/query.clean.jplace" ]; then
+        export fixed_jplace="${out}/place/query.clean.jplace"
+    else
+        export fixed_jplace="${out}/place/query.jplace"
+    fi
+
+    echo "Split multiplicity..." | tee -a ${log_file}
     
 # split multiplicity
 python3 - <<EOF
 import json
 
-input_file = "$out/place/query.jplace"
-output_file = "$out/place/query.split.jplace"
+input_file = "${fixed_jplace}"
+output_file = "${out}/place/query.split.jplace"
 
 with open(input_file) as f:
     data = json.load(f)
@@ -182,33 +221,7 @@ data["placements"] = new_placements
 with open(output_file, "w") as f:
     json.dump(data, f, indent=2)
 EOF
-    
-echo "Examining query.split.jplace and fixing any issues..." | tee -a ${log_file}
-    
-    # Try to examine original file first and fix if needed
-    if ! gappa examine info --jplace-path ${out}/place/query.split.jplace; then
-        # Remove entries with nan values
-        sed -e ':a' -e 'N' -e '$!ba' \
-            -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\],\s*"nm":\s*\[\s*\[\s*"ASV",[^]]*\]\s*\]\s*}//g' \
-            ${out}/place/query.split.jplace > ${out}/place/query.clean.jplace
-        
-        # Verify the fixed file
-        if ! gappa examine info --jplace-path ${out}/place/query.clean.jplace; then
-            echo "Error persists in query.clean.jplace. Manual intervention required." | tee -a ${log_file}
-            exit 1
-        fi
 
-        echo "File query.clean.jplace has been fixed and is ready for processing." | tee -a ${log_file}
-    else
-        echo "File query.split.jplace passed validation and is ready for processing." | tee -a ${log_file}
-    fi
-
-        # Define final jplace file to use
-    if [ -f "${out}/place/query.clean.jplace" ]; then
-        export fixed_jplace="${out}/place/query.clean.jplace"
-    else
-        export fixed_jplace="${out}/place/query.split.jplace"
-    fi
 }
 
 tree_refinement() {
