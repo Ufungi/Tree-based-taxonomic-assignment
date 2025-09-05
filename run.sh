@@ -168,16 +168,16 @@ fi
 }
 
 fix_jplace_file() {
-    echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
-
+   
+echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
+    
     # Try to examine original file first and fix if needed
     if ! gappa examine info --jplace-path ${out}/place/query.jplace; then
-        echo "Removing placements with nan values using sed..." | tee -a ${log_file}
-
-        # Remove only the specific "nan" entries in the "p" field
-        sed -e '/"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\]/d' \
+        # Remove entries with nan values
+        sed -e ':a' -e 'N' -e '$!ba' \
+            -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\],\s*"nm":\s*\[\s*\[\s*"ASV",[^]]*\]\s*\]\s*}//g' \
             ${out}/place/query.jplace > ${out}/place/query.clean.jplace
-
+        
         # Verify the fixed file
         if ! gappa examine info --jplace-path ${out}/place/query.clean.jplace; then
             echo "Error persists in query.clean.jplace. Manual intervention required." | tee -a ${log_file}
@@ -189,14 +189,14 @@ fix_jplace_file() {
         echo "File query.jplace passed validation and is ready for processing." | tee -a ${log_file}
     fi
 
-    # Define final jplace file to use
+        # Define final jplace file to use
     if [ -f "${out}/place/query.clean.jplace" ]; then
         export fixed_jplace="${out}/place/query.clean.jplace"
     else
         export fixed_jplace="${out}/place/query.jplace"
     fi
 
-echo "Split multiplicity..." | tee -a ${log_file}
+    echo "Split multiplicity..." | tee -a ${log_file}
     
 # split multiplicity
 python3 - <<EOF
