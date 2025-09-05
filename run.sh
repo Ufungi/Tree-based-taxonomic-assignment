@@ -5,7 +5,10 @@ source ~/anaconda3/etc/profile.d/conda.sh
 set -e  # Exit on error
 
 # Set the path to the config.yaml file as a global variable
-export CONFIG_GLOBAL="/data/genome/run/snyoo/00_Projects/TM_microbiome_script/phylogenetic_pipeline/config.yaml"
+export CONFIG_GLOBAL="/data/genome/run/snyoo/00_Projects/TM_microbiome_script/Tree-based-taxonomic-assignment/config.yaml"
+
+# Export as environment variable
+export WITCH UDANCE FASTROOT
 
 # Load parameters from config file
 echo "Loading parameters from config.yaml"
@@ -142,7 +145,7 @@ phylogenetic_placement() {
         sed 's/"tree":"\(.*\);"/"tree":"(\1);"/g' ${out_jplace} > ${out_jplace%.jplace}.bracket.jplace
     done
 
-    # Unchunkify the query sequences
+    # Unchunkify the query sequences (output = query.jplace)
     echo "Unchunkifying query sequences..." | tee -a ${log_file}
     gappa prepare unchunkify \
     --abundances-path ${out}/place/abundances_query.json \
@@ -153,14 +156,41 @@ phylogenetic_placement() {
 }
 
 fix_jplace_file() {
-    echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
+
+    echo "Split multiplicity..." | tee -a ${log_file}
+    
+    # split multiplicity
+    python3 - <<EOF
+    import json
+
+    input_file = "$out/place/query.jplace"
+    output_file = "$out/place/query.split.jplace"
+
+    with open(input_file) as f:
+        data = json.load(f)
+
+    new_placements = []
+    for pl in data["placements"]:
+        if len(pl["n"]) > 1:
+            for n in pl["n"]:
+                new_placements.append({"p": pl["p"], "n": [n]})
+        else:
+            new_placements.append(pl)
+
+    data["placements"] = new_placements
+
+    with open(output_file, "w") as f:
+        json.dump(data, f, indent=2)
+    EOF
+    
+    echo "Examining query.split.jplace and fixing any issues..." | tee -a ${log_file}
     
     # Try to examine original file first and fix if needed
-    if ! gappa examine info --jplace-path ${out}/place/query.jplace; then
+    if ! gappa examine info --jplace-path ${out}/place/query.split.jplace; then
         # Remove entries with nan values
         sed -e ':a' -e 'N' -e '$!ba' \
             -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\],\s*"nm":\s*\[\s*\[\s*"ASV",[^]]*\]\s*\]\s*}//g' \
-            ${out}/place/query.jplace > ${out}/place/query.clean.jplace
+            ${out}/place/query.split.jplace > ${out}/place/query.clean.jplace
         
         # Verify the fixed file
         if ! gappa examine info --jplace-path ${out}/place/query.clean.jplace; then
@@ -170,14 +200,14 @@ fix_jplace_file() {
 
         echo "File query.clean.jplace has been fixed and is ready for processing." | tee -a ${log_file}
     else
-        echo "File query.jplace passed validation and is ready for processing." | tee -a ${log_file}
+        echo "File query.split.jplace passed validation and is ready for processing." | tee -a ${log_file}
     fi
 
         # Define final jplace file to use
     if [ -f "${out}/place/query.clean.jplace" ]; then
         export fixed_jplace="${out}/place/query.clean.jplace"
     else
-        export fixed_jplace="${out}/place/query.jplace"
+        export fixed_jplace="${out}/place/query.split.jplace"
     fi
 }
 
