@@ -157,33 +157,33 @@ phylogenetic_placement() {
 
 fix_jplace_file() {
 
-    echo "Split multiplicity..." | tee -a ${log_file}
+echo "Split multiplicity..." | tee -a ${log_file}
     
-    # split multiplicity
-    python3 - <<EOF
-    import json
+# split multiplicity
+python3 - <<EOF
+import json
 
-    input_file = "$out/place/query.jplace"
-    output_file = "$out/place/query.split.jplace"
+input_file = "$out/place/query.jplace"
+output_file = "$out/place/query.split.jplace"
 
-    with open(input_file) as f:
-        data = json.load(f)
+with open(input_file) as f:
+    data = json.load(f)
 
-    new_placements = []
-    for pl in data["placements"]:
-        if len(pl["n"]) > 1:
-            for n in pl["n"]:
-                new_placements.append({"p": pl["p"], "n": [n]})
-        else:
-            new_placements.append(pl)
+new_placements = []
+for pl in data["placements"]:
+    if len(pl["n"]) > 1:
+        for n in pl["n"]:
+            new_placements.append({"p": pl["p"], "n": [n]})
+    else:
+        new_placements.append(pl)
 
-    data["placements"] = new_placements
+data["placements"] = new_placements
 
-    with open(output_file, "w") as f:
-        json.dump(data, f, indent=2)
-    EOF
+with open(output_file, "w") as f:
+    json.dump(data, f, indent=2)
+EOF
     
-    echo "Examining query.split.jplace and fixing any issues..." | tee -a ${log_file}
+echo "Examining query.split.jplace and fixing any issues..." | tee -a ${log_file}
     
     # Try to examine original file first and fix if needed
     if ! gappa examine info --jplace-path ${out}/place/query.split.jplace; then
