@@ -209,7 +209,7 @@ echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
     if [ -f "${out}/place/query.clean.jplace" ]; then
         export fixed_jplace="${out}/place/query.clean.jplace"
     else
-        mv ${out}/place/query.split.jplace ${out}/place/query.clean.jplace
+        mv ${out}/place/query.jplace ${out}/place/query.clean.jplace
         export fixed_jplace="${out}/place/query.clean.jplace"
     fi
 
