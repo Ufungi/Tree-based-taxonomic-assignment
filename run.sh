@@ -264,33 +264,41 @@ tree_refinement() {
 cluster_analysis() {
     echo "Starting cluster analysis..." | tee -a ${log_file}
 
-        # Get the list of subfolders matching the pattern
-        subfolders=$(find ${out}/refine/output/udance -mindepth 1 -maxdepth 1 -type d -regex '.*/[0-9]+')
+    # Get the list of subfolders matching the pattern
+    subfolders=$(find ${out}/refine/output/udance -mindepth 1 -maxdepth 1 -type d -regex '.*/[0-9]+')
 
-        # Process each subfolder
-        for folder in ${subfolders}; do
-            echo "Processing folder: ${folder}" | tee -a ${log_file}
-            cd "${folder}"
+    # Process each subfolder
+    for folder in ${subfolders}; do
+        echo "Processing folder: ${folder}" | tee -a ${log_file}
+        cd "${folder}"
 
-            # Root the tree using FastRoot
-            python $fastroot \
-            -i ./backbone/raxml.expanded.nwk \
-            -m MP \
-            -o ./raxml.expanded.nwk.rooted
+        # Check if the required tree file exists
+        if [ ! -f ./backbone/raxml.expanded.nwk ]; then
+            echo "File ./backbone/raxml.expanded.nwk not found in ${folder}. Skipping." | tee -a ${log_file}
+            cd - > /dev/null
+            continue
+        fi
 
-            # Perform clustering using TreeCluster
-            cluster_file="${out}/cluster/cluster_$(basename ${folder}).tsv"
-            TreeCluster.py -i ./raxml.expanded.nwk.rooted -t 0.02 -m single_linkage > ${cluster_file}
+        # Root the tree using FastRoot
+        python $fastroot \
+        -i ./backbone/raxml.expanded.nwk \
+        -m MP \
+        -o ./raxml.expanded.nwk.rooted
 
-            # Copy the cluster file to the output directory
-            aln_file="${out}/cluster/shrunk.aln_$(basename ${folder}).fasta"
-            cp ./backbone/shrunk.aln ${aln_file}
+        # Perform clustering using TreeCluster
+        cluster_file="${out}/cluster/cluster_$(basename ${folder}).tsv"
+        TreeCluster.py -i ./raxml.expanded.nwk.rooted -t 0.02 -m single_linkage > ${cluster_file}
 
-            # Copy the tree file to the output directory
-            tree_file="${out}/cluster/raxml.expanded.nwk.rooted_$(basename ${folder}).nwk"
-            cp ./raxml.expanded.nwk.rooted ${tree_file}
-            
-        done
+        # Copy the cluster file to the output directory
+        aln_file="${out}/cluster/shrunk.aln_$(basename ${folder}).fasta"
+        cp ./backbone/shrunk.aln ${aln_file}
+
+        # Copy the tree file to the output directory
+        tree_file="${out}/cluster/raxml.expanded.nwk.rooted_$(basename ${folder}).nwk"
+        cp ./raxml.expanded.nwk.rooted ${tree_file}
+
+        cd - > /dev/null
+    done
 }
 
 detect_long_branches() {
