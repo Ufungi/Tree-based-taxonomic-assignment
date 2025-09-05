@@ -24,7 +24,7 @@ mkdir -p ${out}/refine
 mkdir -p ${out}/cluster
 mkdir -p ${out}/taxonomy
 
-fixed_jplace="${out}/place/query.jplace"
+fixed_jplace="${out}/place/query.clean.jplace"
 
 # Set log file
 echo "Pipeline started at $(date)" > ${log_file}
@@ -176,13 +176,27 @@ echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
     # Try to examine original file first and fix if needed
     if ! gappa examine info --jplace-path ${out}/place/query.jplace; then
         # Remove entries with nan values
+        echo "Errors found in query.jplace. Attempting to fix..." | tee -a ${log_file}
+        # Use sed to remove problematic entries
+        # This command removes any placement entries where "p" contains "nan"
         sed -e ':a' -e 'N' -e '$!ba' \
-            -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\],\s*"nm":\s*\[\s*\[\s*"ASV",[^]]*\]\s*\]\s*}//g' \
+            -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\][^}]*}//g' \
             ${out}/place/query.jplace > ${out}/place/query.clean.jplace
-        
+           # and "nm" contains "ASV"
+           #     sed -e ':a' -e 'N' -e '$!ba' \
+           # -e 's/,\s*{\s*"p":\s*\[\s*\[[^]]*nan[^]]*\]\s*\],\s*"nm":\s*\[\s*\[\s*"ASV",[^]]*\]\s*\]\s*}//g' \
+           # ${out}/place/query.jplace > ${out}/place/query.clean.jplace
+
+        # Compare original and cleaned files to extract removed entries
+        diff ${out}/place/query.jplace ${out}/place/query.clean.jplace \
+        | grep '^<' | sed 's/^< //' > ${out}/place/query.removed.txt
+
+        # make list of IDs to remove
+        grep -o '"n": \[ "[^"]*"' ${out}/place/query.removed.txt | sed 's/.*\[ "\(.*\)".*/\1/' > ${out}/place/removed_ids.txt
+
         # Verify the fixed file
         if ! gappa examine info --jplace-path ${out}/place/query.clean.jplace; then
-            echo "Error persists in query.clean.jplace. Manual intervention required." | tee -a ${log_file}
+            echo "Error persists in query.clean.jplace. Manual inspection required." | tee -a ${log_file}
             exit 1
         fi
 
@@ -195,13 +209,15 @@ echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
     if [ -f "${out}/place/query.clean.jplace" ]; then
         export fixed_jplace="${out}/place/query.clean.jplace"
     else
-        export fixed_jplace="${out}/place/query.jplace"
+        mv ${out}/place/query.split.jplace ${out}/place/query.clean.jplace
+        export fixed_jplace="${out}/place/query.clean.jplace"
     fi
 
-    echo "Split multiplicity..." | tee -a ${log_file}
+echo "Split multiplicity..." | tee -a ${log_file}
     
 # split multiplicity
 python3 - <<EOF
+
 import json
 
 input_file = "${fixed_jplace}"
@@ -212,17 +228,37 @@ with open(input_file) as f:
 
 new_placements = []
 for pl in data["placements"]:
-    if len(pl["n"]) > 1:
-        for n in pl["n"]:
-            new_placements.append({"p": pl["p"], "n": [n]})
+    if "n" in pl:  # 단순 이름 배열
+        if len(pl["n"]) > 1:
+            for n in pl["n"]:
+                new_placements.append({"p": pl["p"], "n": [n]})
+        else:
+            new_placements.append(pl)
+    elif "nm" in pl:  # 이름 + multiplicity 배열
+        if len(pl["nm"]) > 1:
+            for n in pl["nm"]:
+                new_placements.append({"p": pl["p"], "nm": [n]})
+        else:
+            new_placements.append(pl)
     else:
+        # 혹시 모르는 다른 케이스를 그냥 그대로 유지
         new_placements.append(pl)
 
 data["placements"] = new_placements
 
 with open(output_file, "w") as f:
     json.dump(data, f, indent=2)
+
 EOF
+
+# Replace all occurrences of "nm" with "n" in ${out}/place/query.split.jplace
+# refer to decompose.py line 25
+sed -i 's/"nm":/"n":/g' ${out}/place/query.split.jplace
+
+# In ${out}/place/query.split.jplace, the "n" field is [[ "id", <count> ]] instead of ["id"].  
+# Flatten "n" field to ["id"] to prevent errors.  
+jq '(.placements[].n) |= (map(if type=="array" then .[0] else . end))' \
+  ${out}/place/query.split.jplace > ${out}/refine/output/placement.fixed && mv ${out}/refine/output/placement.fixed ${out}/place/query.split.jplace
 
 }
 
@@ -238,7 +274,9 @@ tree_refinement() {
     # Pad sequences and prepare files
     # uDance originally requires aligned sequences, but can accept unaligned sequences with equal length
     python ${scripts}/seq_length_sync.py -i ${query_fasta} -o ${out}/refine/output/placement/query.fa
-    
+
+    awk 'BEGIN{while((getline<"'${out}'/place/removed_ids.txt")>0) r[$1]=1} /^>/{id=substr($1,2)} r[id]{skip=1;next} skip{skip=0;next}1' ${out}/refine/output/placement/query.fa > tmp && mv tmp ${out}/refine/output/placement/query.fa
+
     # Combine db and query fasta and verify the line count
     cat ${db_fasta} ${query_fasta} > ${out}/refine/combined.fasta
     if [ $(wc -l < ${out}/refine/combined.fasta) -ne $(( $(wc -l < ${db_fasta}) + $(wc -l < ${query_fasta}) )) ]; then
@@ -253,10 +291,7 @@ tree_refinement() {
 
     cp ${best_tree} ${out}/refine/output/backbone.nwk
 
-    cp ${fixed_jplace} ${out}/refine/output/placement.jplace
-    # Replace all occurrences of "nm" with "n" in placement.jplace
-    # refer to decompose.py line 25
-    sed -i 's/"nm":/"n":/g' ${out}/refine/output/placement.jplace
+    cp ${out}/place/query.split.jplace ${out}/refine/output/placement.jplace
 
     # Activate uDance environment
     echo "Running UDance analysis..." | tee -a ${log_file}
