@@ -221,27 +221,27 @@ python3 - <<EOF
 import json
 
 input_file = "${fixed_jplace}"
-output_file = "${out}/place/query.split.jplace"
+output_file = "${out}/place/query.spㅁlit.jplace"
 
 with open(input_file) as f:
     data = json.load(f)
 
 new_placements = []
 for pl in data["placements"]:
-    if "n" in pl:  # 단순 이름 배열
+    if "n" in pl:  # simple name array
         if len(pl["n"]) > 1:
             for n in pl["n"]:
                 new_placements.append({"p": pl["p"], "n": [n]})
         else:
             new_placements.append(pl)
-    elif "nm" in pl:  # 이름 + multiplicity 배열
+    elif "nm" in pl:  # name + multiplicity array
         if len(pl["nm"]) > 1:
             for n in pl["nm"]:
                 new_placements.append({"p": pl["p"], "nm": [n]})
         else:
             new_placements.append(pl)
     else:
-        # 혹시 모르는 다른 케이스를 그냥 그대로 유지
+        # keep as-is in case of unexpected structure
         new_placements.append(pl)
 
 data["placements"] = new_placements
