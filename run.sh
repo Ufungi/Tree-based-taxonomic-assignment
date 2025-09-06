@@ -24,8 +24,6 @@ mkdir -p ${out}/refine
 mkdir -p ${out}/cluster
 mkdir -p ${out}/taxonomy
 
-fixed_jplace="${out}/place/query.clean.jplace"
-
 # Set log file
 echo "Pipeline started at $(date)" > ${log_file}
 
@@ -209,9 +207,13 @@ echo "Examining query.jplace and fixing any issues..." | tee -a ${log_file}
     if [ -f "${out}/place/query.clean.jplace" ]; then
         export fixed_jplace="${out}/place/query.clean.jplace"
     else
-        mv ${out}/place/query.jplace ${out}/place/query.clean.jplace
+        cp ${out}/place/query.jplace ${out}/place/query.clean.jplace
         export fixed_jplace="${out}/place/query.clean.jplace"
     fi
+
+# Replace all occurrences of "nm" with "n" in ${fixed_jplace}
+# refer to decompose.py line 25
+sed -i 's/"nm":/"n":/g' ${fixed_jplace}
 
 echo "Split multiplicity..." | tee -a ${log_file}
     
@@ -221,27 +223,21 @@ python3 - <<EOF
 import json
 
 input_file = "${fixed_jplace}"
-output_file = "${out}/place/query.spㅁlit.jplace"
+output_file = "${out}/place/tmp.jplace"
 
 with open(input_file) as f:
     data = json.load(f)
 
 new_placements = []
 for pl in data["placements"]:
-    if "n" in pl:  # simple name array
-        if len(pl["n"]) > 1:
+    if "n" in pl: 
+        if len(pl["n"]) > 1: # If "n" has multiple entries
             for n in pl["n"]:
                 new_placements.append({"p": pl["p"], "n": [n]})
         else:
             new_placements.append(pl)
-    elif "nm" in pl:  # name + multiplicity array
-        if len(pl["nm"]) > 1:
-            for n in pl["nm"]:
-                new_placements.append({"p": pl["p"], "nm": [n]})
-        else:
-            new_placements.append(pl)
     else:
-        # keep as-is in case of unexpected structure
+        # If "n" field is missing, keep the placement as is
         new_placements.append(pl)
 
 data["placements"] = new_placements
@@ -251,14 +247,12 @@ with open(output_file, "w") as f:
 
 EOF
 
-# Replace all occurrences of "nm" with "n" in ${out}/place/query.split.jplace
-# refer to decompose.py line 25
-sed -i 's/"nm":/"n":/g' ${out}/place/query.split.jplace
+mv ${out}/place/tmp.jplace ${fixed_jplace}
 
-# In ${out}/place/query.split.jplace, the "n" field is [[ "id", <count> ]] instead of ["id"].  
+# In ${fixed_jplace}, the "n" field is [[ "id", <count> ]] instead of ["id"].  
 # Flatten "n" field to ["id"] to prevent errors.  
 jq '(.placements[].n) |= (map(if type=="array" then .[0] else . end))' \
-  ${out}/place/query.split.jplace > ${out}/refine/output/placement.fixed && mv ${out}/refine/output/placement.fixed ${out}/place/query.split.jplace
+  ${fixed_jplace} > ${out}/place/tmp.jplace && mv ${out}/place/tmp.jplace ${fixed_jplace}
 
 }
 
@@ -277,21 +271,34 @@ tree_refinement() {
 
     awk 'BEGIN{while((getline<"'${out}'/place/removed_ids.txt")>0) r[$1]=1} /^>/{id=substr($1,2)} r[id]{skip=1;next} skip{skip=0;next}1' ${out}/refine/output/placement/query.fa > tmp && mv tmp ${out}/refine/output/placement/query.fa
 
-    # Combine db and query fasta and verify the line count
-    cat ${db_fasta} ${query_fasta} > ${out}/refine/combined.fasta
-    if [ $(wc -l < ${out}/refine/combined.fasta) -ne $(( $(wc -l < ${db_fasta}) + $(wc -l < ${query_fasta}) )) ]; then
-        echo "Error: File concatenation failed - line count mismatch" | tee -a ${log_file}
+    # Combine db and query fasta safely
+    {
+        cat "${db_fasta}"
+        # add newline only if db_fasta does not end with newline
+        [ -n "$(tail -c1 "${db_fasta}")" ] && echo
+        cat "${query_fasta}"
+    } > "${out}/refine/combined.fasta"
+    
+    # Verify line count (allowing optional extra newline at end)
+    db_lines=$(wc -l < "${db_fasta}")
+    query_lines=$(wc -l < "${query_fasta}")
+    combined_lines=$(wc -l < "${out}/refine/combined.fasta")
+    
+    if [ "${combined_lines}" -lt $((db_lines + query_lines)) ]; then
+        echo "Error: File concatenation failed - line count mismatch" | tee -a "${log_file}"
         exit 1
     fi
 
     python ${scripts}/seq_length_sync.py -i ${out}/refine/combined.fasta -o ${out}/refine/alignments/backbone.fa
-    rm ${out}/refine/combined.fasta
+    #rm ${out}/refine/combined.fasta
     cp ${out}/refine/alignments/backbone.fa ${out}/refine/output/placement/backbone.fa
     cp ${out}/refine/alignments/backbone.fa ${out}/refine/output/trimmed/backbone.fa
 
     cp ${best_tree} ${out}/refine/output/backbone.nwk
 
-    cp ${out}/place/query.split.jplace ${out}/refine/output/placement.jplace
+    # Use the fixed jplace file
+    fixed_jplace="${out}/place/query.clean.jplace"
+    cp ${fixed_jplace} ${out}/refine/output/placement.jplace
 
     # Activate uDance environment
     echo "Running UDance analysis..." | tee -a ${log_file}
