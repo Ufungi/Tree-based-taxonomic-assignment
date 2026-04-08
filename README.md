@@ -215,16 +215,16 @@ The `Bacteria/` and `Fungi/` folders contain the bacterial and fungal reference 
 
 | Tool | Role | Reference |
 |------|------|-----------|
-| WITCH | Reference multiple sequence alignment | Shen et al. |
-| VeryFastTree | Fast maximum-likelihood tree inference | |
-| RAxML-NG | Branch length re-estimation & rooting | Kozlov et al. |
-| App-SpaM | Alignment-free phylogenetic placement | Blanke & Morgenstern |
-| gappa | jplace chunkify/unchunkify utility | Czech et al. |
-| uDance | Divide-and-conquer tree refinement | Balaban et al. |
-| FastRoot | Minimum-variance rooting | Mai et al. |
-| TreeCluster | Phylotype clustering | Balaban et al. |
-| TreeShrink | Long-branch detection | Mai & Mirarab |
-| MonoPhy (R) | Monophyly assessment | Schwery & O'Meara |
+| WITCH | Reference multiple sequence alignment | Shen et al. (2022) *J. Comput. Biol.* 29:782–801 |
+| VeryFastTree | Fast maximum-likelihood tree inference | Piñeiro et al. (2020) *Bioinformatics* 36:4658–4659 |
+| RAxML-NG | Branch length re-estimation & rooting | Kozlov et al. (2019) *Bioinformatics* 35:4453–4455 |
+| App-SpaM | Alignment-free phylogenetic placement | Blanke & Morgenstern (2021) *Bioinform. Adv.* 1:vbab027 |
+| gappa | jplace chunkify/unchunkify utility | Czech et al. (2020) *Bioinformatics* 36:3263–3265 |
+| uDance | Divide-and-conquer tree refinement | Balaban et al. (2024) *Nat. Biotechnol.* 42:768–777 |
+| FastRoot | Minimum-variance rooting | Mai et al. (2017) *PLOS ONE* 12:e0182238 |
+| TreeCluster | Phylotype clustering | Balaban et al. (2019) *PLOS ONE* 14:e0221068 |
+| TreeShrink | Long-branch detection | Mai & Mirarab (2018) *BMC Genomics* 19:272 |
+| MonoPhy (R) | Monophyly assessment | Schwery & O'Meara (2016) *PeerJ Comput. Sci.* 2:e56 |
 
 ---
 
@@ -232,9 +232,44 @@ The `Bacteria/` and `Fungi/` folders contain the bacterial and fungal reference 
 
 If you use this pipeline in your research, please cite:
 
-Yoo, S., Seo, C.W. & Lim, Y.W. (2026). Functionally distinct core microbes of *Tricholoma matsutake* revealed by cross-study analysis.  
-*Microbiome*, 14, 58.  
-https://doi.org/10.1186/s40168-025-02329-x
+**Pipeline:**
+
+Yoo, S., Seo, C.W. & Lim, Y.W. (2026). Functionally distinct core microbes of *Tricholoma matsutake* revealed by cross-study analysis. *Microbiome*, 14, 58. https://doi.org/10.1186/s40168-025-02329-x
+
+**Tools:**
+
+Shen, C., Park, M. & Warnow, T. (2022). WITCH: improved multiple sequence alignment through weighted consensus hidden Markov model alignment. *J. Comput. Biol.*, 29, 782–801. https://doi.org/10.1089/cmb.2021.0585
+
+Piñeiro, C., Abuín, J.M. & Pichel, J.C. (2020). VeryFastTree: speeding up the estimation of phylogenies for large alignments through parallelization and vectorization strategies. *Bioinformatics*, 36, 4658–4659. https://doi.org/10.1093/bioinformatics/btaa582
+
+Kozlov, A.M., Darriba, D., Flouri, T., Morel, B. & Stamatakis, A. (2019). RAxML-NG: a fast, scalable and user-friendly tool for maximum likelihood phylogenetic inference. *Bioinformatics*, 35, 4453–4455. https://doi.org/10.1093/bioinformatics/btz305
+
+Blanke, M. & Morgenstern, B. (2021). App-SpaM: phylogenetic placement of short reads without sequence alignment. *Bioinform. Adv.*, 1, vbab027. https://doi.org/10.1093/bioadv/vbab027
+
+Czech, L., Barbera, P. & Stamatakis, A. (2020). Genesis and Gappa: processing, analyzing and visualizing phylogenetic (placement) data. *Bioinformatics*, 36, 3263–3265. https://doi.org/10.1093/bioinformatics/btaa070
+
+Balaban, M., Jiang, Y., Zhu, Q., McDonald, D., Knight, R. & Mirarab, S. (2024). Generation of accurate, expandable phylogenomic trees with uDance. *Nat. Biotechnol.*, 42, 768–777. https://doi.org/10.1038/s41587-023-01868-8
+
+Mai, U., Sayyari, E. & Mirarab, S. (2017). Minimum variance rooting of phylogenetic trees and implications for species tree reconstruction. *PLOS ONE*, 12, e0182238. https://doi.org/10.1371/journal.pone.0182238
+
+Balaban, M., Moshiri, N., Mai, U., Jia, X. & Mirarab, S. (2019). TreeCluster: clustering biological sequences using phylogenetic trees. *PLOS ONE*, 14, e0221068. https://doi.org/10.1371/journal.pone.0221068
+
+Mai, U. & Mirarab, S. (2018). TreeShrink: fast and accurate detection of outlier long branches in collections of phylogenetic trees. *BMC Genomics*, 19, 272. https://doi.org/10.1186/s12864-018-4620-2
+
+Schwery, O. & O'Meara, B.C. (2016). MonoPhy: a simple R package to find and visualize monophyly issues. *PeerJ Comput. Sci.*, 2, e56. https://doi.org/10.7717/peerj-cs.56
+
+```bibtex
+@article{yoo2026tricholoma,
+  title     = {Functionally distinct core microbes of {\textit{Tricholoma matsutake}} revealed by cross-study analysis},
+  author    = {Yoo, S. and Seo, C.W. and Lim, Y.W.},
+  journal   = {Microbiome},
+  volume    = {14},
+  pages     = {58},
+  year      = {2026},
+  doi       = {10.1186/s40168-025-02329-x},
+  url       = {https://doi.org/10.1186/s40168-025-02329-x}
+}
+```
 
 ---
 
