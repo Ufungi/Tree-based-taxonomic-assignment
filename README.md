@@ -13,23 +13,6 @@
 
 This pipeline places query sequences onto a reference backbone tree, refines the topology using divide-and-conquer methods (uDance), clusters tips into phylotypes with monophyly verification, and assigns taxonomy through a custom tree-walking LCA algorithm — providing robust, phylogeny-aware classification for bacteria, fungi, and other microbial groups.
 
----
-
-## Table of Contents
-
-- [Key Features](#-key-features)
-- [Pipeline Overview](#-pipeline-overview)
-- [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
-- [Input Files](#-input-files)
-- [Configuration](#-configuration)
-- [Usage](#-usage)
-- [Example Data](#-example-data)
-- [Tools Used](#-tools-used)
-- [Citation](#-citation)
-
----
-
 ## ✨ Key Features
 
 - **Phylogenetic placement** — Places query sequences onto a reference tree using [App-SpaM](https://github.com/matthiasblanke/App-SpaM) (alignment-free, fast)
