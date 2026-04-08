@@ -258,19 +258,6 @@ Mai, U. & Mirarab, S. (2018). TreeShrink: fast and accurate detection of outlier
 
 Schwery, O. & O'Meara, B.C. (2016). MonoPhy: a simple R package to find and visualize monophyly issues. *PeerJ Comput. Sci.*, 2, e56. https://doi.org/10.7717/peerj-cs.56
 
-```bibtex
-@article{yoo2026tricholoma,
-  title     = {Functionally distinct core microbes of {\textit{Tricholoma matsutake}} revealed by cross-study analysis},
-  author    = {Yoo, S. and Seo, C.W. and Lim, Y.W.},
-  journal   = {Microbiome},
-  volume    = {14},
-  pages     = {58},
-  year      = {2026},
-  doi       = {10.1186/s40168-025-02329-x},
-  url       = {https://doi.org/10.1186/s40168-025-02329-x}
-}
-```
-
 ---
 
 <p align="center">
