@@ -236,19 +236,6 @@ Yoo, S., Seo, C.W. & Lim, Y.W. (2026). Functionally distinct core microbes of *T
 *Microbiome*, 14, 58.  
 https://doi.org/10.1186/s40168-025-02329-x
 
-```bibtex
-@article{yoo2026tricholoma,
-  title     = {Functionally distinct core microbes of {\textit{Tricholoma matsutake}} revealed by cross-study analysis},
-  author    = {Yoo, S. and Seo, C.W. and Lim, Y.W.},
-  journal   = {Microbiome},
-  volume    = {14},
-  pages     = {58},
-  year      = {2026},
-  doi       = {10.1186/s40168-025-02329-x},
-  url       = {https://doi.org/10.1186/s40168-025-02329-x}
-}
-```
-
 ---
 
 <p align="center">
