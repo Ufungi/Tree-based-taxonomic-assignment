@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/DOI-10.1186%2Fs40168--025--02329--x-orange" alt="DOI">
 </p>
 
-> **Accurate taxonomic annotation of metagenomic/amplicon sequences via phylogenetic placement, tree refinement, and LCA-based assignment.**
+> **Accurate taxonomic annotation of amplicon sequences via phylogenetic placement, tree refinement, and LCA-based assignment.**
 
 This pipeline places query sequences onto a reference backbone tree, refines the topology using divide-and-conquer methods (uDance), clusters tips into phylotypes with monophyly verification, and assigns taxonomy through a custom tree-walking LCA algorithm — providing robust, phylogeny-aware classification for bacteria, fungi, and other microbial groups.
 
