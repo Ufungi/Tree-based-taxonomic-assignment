@@ -232,24 +232,22 @@ The `Bacteria/` and `Fungi/` folders contain the bacterial and fungal reference 
 
 If you use this pipeline in your research, please cite:
 
-Yoo, S.N. et al. (2025). Cross-study discovery of functionally distinct core microbes of *Tricholoma matsutake*.  
-*Microbiome*, 13, 107.  
+Yoo, S., Seo, C.W. & Lim, Y.W. (2026). Functionally distinct core microbes of *Tricholoma matsutake* revealed by cross-study analysis.  
+*Microbiome*, 14, 58.  
 https://doi.org/10.1186/s40168-025-02329-x
 
 ```bibtex
-@article{yoo2025tricholoma,
-  title     = {Cross-study discovery of functionally distinct core microbes of {\textit{Tricholoma matsutake}}},
-  author    = {Yoo, S.N. and others},
+@article{yoo2026tricholoma,
+  title     = {Functionally distinct core microbes of {\textit{Tricholoma matsutake}} revealed by cross-study analysis},
+  author    = {Yoo, S. and Seo, C.W. and Lim, Y.W.},
   journal   = {Microbiome},
-  volume    = {13},
-  pages     = {107},
-  year      = {2025},
+  volume    = {14},
+  pages     = {58},
+  year      = {2026},
   doi       = {10.1186/s40168-025-02329-x},
   url       = {https://doi.org/10.1186/s40168-025-02329-x}
 }
 ```
-
-> **Note:** Please verify author names and volume/page numbers against the published article at https://link.springer.com/article/10.1186/s40168-025-02329-x and update the BibTeX accordingly.
 
 ---
 
