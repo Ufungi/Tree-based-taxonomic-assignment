@@ -1,4 +1,4 @@
-# Phylogenetic Tree-based Taxonomic Assignment of Amplicon Sequences
+# Phylogenetic Tree-based Taxonomic Assignment of Heterogenous Amplicon Sequences
 
 <p align="center">
   <img src="https://img.shields.io/badge/platform-Linux-blue?logo=linux&logoColor=white" alt="Platform">
