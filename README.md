@@ -25,7 +25,7 @@ This pipeline places query sequences onto a reference backbone tree, refines the
 ---
 
 ## Pipeline Overview
-<img width="961" height="878.5" alt="Workflow_github" src="https://github.com/user-attachments/assets/3ae33363-0993-4a62-998d-36b226bfee81" />
+<img width="1000" height="914" alt="Workflow_github" src="https://github.com/user-attachments/assets/1a9b6a1a-6584-4a6d-884a-34f083143294" />
 
 ```
 Input: query.fasta + reference DB (FASTA + taxonomy)
